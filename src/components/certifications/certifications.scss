@@ -1,0 +1,115 @@
+@import "../../../global.scss";
+
+.certifications {
+
+
+    .slidercert {
+        background-color: rgba(0,0,0,.8);
+        height: 100vh;
+        left: 0;
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 1000;
+        align-items: center;
+        display: flex;
+
+        .close {
+            font-size: 30px;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+        }
+
+        .arrow, .close {
+            color: #d3d3d3;
+            cursor: pointer;
+        }
+
+        .arrow {
+            margin: 20px;
+
+            @include mobile{
+                position: absolute;
+                background-color: rgba(0,0,0,.6);
+                padding: 5px;
+            }
+        }
+
+        .arrow:last-child {
+            right: 0;
+        }
+
+        .sliderWrapper {
+            align-items: center;
+            display: flex;
+            height: 100%;
+            justify-content: center;
+            width: 100%;
+
+            .sliderImg {
+                height: 80vh;
+                object-fit: contain;
+                width: 100%;
+            }
+        }
+        
+    }
+    .container {
+        max-width: 1000px;
+        margin: auto;
+
+        h2 {
+            color: #142eb5;
+            font-weight: bold;
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 30px;
+
+            
+            @include mobile{
+                font-size: 25px;
+           }
+        }
+
+        .certGall {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+
+            @include mobile{
+              padding: 0 20px;
+              gap: 5px;
+            }
+
+            .gallCard {
+                flex: 1;
+                height: 200px;
+                max-width: 315px;
+                min-width: 315px;
+                cursor: pointer;
+                
+                @include mobile{
+                    max-width: 100%;
+                    width: 150px;
+                    min-width: 150px;
+                    height: 120px;
+                }
+
+                @include mobile{
+                    max-width: 100%;
+                    width: 150px
+                }
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+.scrollHide {
+    overflow: hidden;
+}

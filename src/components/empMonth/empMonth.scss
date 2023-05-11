@@ -1,0 +1,67 @@
+@import "../../../global.scss";
+
+.empMonth {
+    margin: 50px 0;
+    background-color: #f3f3f3;
+    margin-bottom: 0;
+
+    @include mobile{
+        padding: 30px 0px;
+    }
+
+    .container {
+        max-width: 1000px;
+        margin: auto;
+
+        .empFlex {
+            display: flex;
+            align-items: center;
+
+            @include mobile{
+                flex-direction: column;
+            }
+
+            h2 {
+                flex: 1;
+                color: #000;
+                font-weight: bold;
+                font-size: 30px;
+
+                @include mobile{
+                    font-size: 25px;
+                }
+            }
+
+            .empphoto {
+                flex: 2;
+                display: flex;
+                align-items: center;
+                gap: 20px;
+
+                @include mobile{
+                    flex-direction: column;
+                }
+
+                .trophy {
+                    width: 250px;
+                    height: 500px;
+
+                    @include mobile{
+                        width: 200px;
+                        height: 400px;
+                    }
+                }
+
+                .emp {
+                    width: 350px;
+                    height: 250px;
+
+                    @include mobile{
+                        width: 250px;
+                        height: 150px;
+                    }
+                }
+            }
+        }
+    }
+}
