@@ -10,21 +10,26 @@ const Projects = () => {
     {
       id: "fiverr",
       title: "Fiverr",
+      giturl: "https://github.com/adibfiroz/projects/tree/fiverrapp",
     },
     {
       id: "blog",
+      giturl: "https://github.com/adibfiroz/projects/tree/blogapp",
       title: "Blog",
     },
     {
       id: "booking",
       title: "Booking",
+      giturl: "https://github.com/adibfiroz/projects/tree/booking",
     },
     {
       id: "videoapp",
+      giturl: "https://github.com/adibfiroz/projects/tree/videoapp",
       title: "Video App",
     },
     {
       id: "shop",
+      giturl: "https://github.com/adibfiroz/projects/tree/shop",
       title: "Shop",
     },
   ];
@@ -63,6 +68,7 @@ const Projects = () => {
                 setSelected={setSelected}
                 id={item.id}
                 key={item.id}
+                giturl={item.giturl}
               />
             ))}
           </ul>

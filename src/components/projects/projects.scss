@@ -2,10 +2,12 @@
 
 .projects {
     margin: 50px 0;
+    position: relative;
 
     
     @include mobile{
       margin: 30px 0;
+      margin-bottom: 55px;
     }
 
     .container {

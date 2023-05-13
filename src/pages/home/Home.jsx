@@ -14,6 +14,17 @@ import Contact from "../../components/contact/Contact";
 
 const Home = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      document.querySelector(this.getAttribute("href")).scrollIntoView({
+        behavior: "smooth",
+      });
+    });
+  });
+
   return (
     <div className="home">
       <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
