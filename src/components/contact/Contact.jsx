@@ -36,9 +36,10 @@ const Contact = () => {
         <div className="cl">
           <form ref={ref} onSubmit={handleSubmit}>
             <div className="title">Contact Us</div>
-            <input placeholder="Name" name="name" />
-            <input placeholder="Email" name="email" />
+            <input required placeholder="Name" name="name" />
+            <input required placeholder="Email" name="email" />
             <textarea
+              required
               placeholder="Write your message"
               name="message"
               rows={8}
