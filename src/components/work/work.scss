@@ -46,6 +46,7 @@
             img {
                 width: 400px;
                 height: 400px;
+                animation: move 3s infinite ease alternate; 
 
                 @include mobile {
                     width: 250px;
@@ -81,4 +82,14 @@
             }
         }
     }
+
+    
+@keyframes move {
+    from {
+      transform: translateY(-15px);
+    }
+    to {
+      transform: translateY(0px) scale(1.03);
+    }
+  }
 }
