@@ -46,7 +46,7 @@
             img {
                 width: 400px;
                 height: 400px;
-                animation: move 3s infinite ease alternate; 
+                animation: move1 3s infinite ease alternate; 
 
                 @include mobile {
                     width: 250px;
@@ -84,7 +84,7 @@
     }
 
     
-@keyframes move {
+@keyframes move1 {
     from {
       transform: translateY(-15px);
     }
