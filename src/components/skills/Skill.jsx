@@ -14,13 +14,13 @@ const Skill = () => {
             <div className="slide">Express</div>
             <div className="slide">Context API</div>
             <div className="slide">Saas</div>
-            <div className="slide">Cors</div>
+            <div className="slide">Next js</div>
             <div className="slide">React js</div>
             <div className="slide">Node js</div>
             <div className="slide">Express</div>
             <div className="slide">Context API</div>
             <div className="slide">Saas</div>
-            <div className="slide">Cors</div>
+            <div className="slide">Next js</div>
           </div>
         </div>
 

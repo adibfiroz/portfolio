@@ -16,7 +16,9 @@ const Work = () => {
           <div className="workr">
             <div className="workFlex">
               <BusinessIcon className="icon" />
-              <div className="mothshut">MouthShut.com</div>
+              <div className="mothshut">
+                MouthShut.com - <i>Frontend Developer</i>{" "}
+              </div>
             </div>
             <div className="workFlex" style={{ marginTop: "20px" }}>
               <CalendarMonthIcon className="icon" />
@@ -32,14 +34,14 @@ const Work = () => {
                     website.
                   </li>
                   <li>
-                    I have develop newsletters, responsive websites, email
-                    templates and much more.
+                    I have develop newsletters, responsive websites. from
+                    creating new pages to changes in existing one.
                   </li>
-                  <li>Solved error logs issues, live website issues.</li>
+                  <li>Seo pratices, testing & optimzation. </li>
+                  <li>Solved error logs issues, bugs.</li>
                   <li>
-                    worked in agile environment on software development cylce.
+                    Worked in agile environment on software development cylce.
                   </li>
-                  <li>learn how to test api with postman.</li>
                 </ul>
               </div>
             </div>

@@ -20,9 +20,9 @@ const Intro = () => {
             <div className="title">
               <div className="wrapper">
                 <h3 className="job">Software Developer</h3>
-                <h3 className="job">Full-Stack Developer</h3>
-                <h3 className="job">Web Developer</h3>
+                <h3 className="job">React Developer</h3>
                 <h3 className="job">FrontEnd Developer</h3>
+                <h3 className="job">Mern stack Developer</h3>
               </div>
             </div>
             <div className="contact">
