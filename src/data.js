@@ -13,6 +13,21 @@ export const blogapp = [
   },
 ];
 
+export const spotifyclone = [
+  {
+    id: 1,
+    img: "/img/audio1.png",
+  },
+  {
+    id: 2,
+    img: "/img/audio2.png",
+  },
+  {
+    id: 3,
+    img: "/img/audio3.png",
+  },
+];
+
 export const fiverrapp = [
   {
     id: 1,

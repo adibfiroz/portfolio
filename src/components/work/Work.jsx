@@ -37,6 +37,7 @@ const Work = () => {
                     I have develop newsletters, responsive websites. from
                     creating new pages to changes in existing one.
                   </li>
+                  <li>OOCSS practices</li>
                   <li>Seo pratices, testing & optimzation. </li>
                   <li>Solved error logs issues, bugs.</li>
                   <li>

@@ -43,7 +43,7 @@ const Home = () => {
           <div className="container">
             <img src="/img/AF.png" alt="af" />
             <span>
-              Copyright © {new Date().getFullYear()} adibfiroz.onrender.com
+              Made with Vite-React {new Date().getFullYear()} By Adib Firoz
             </span>
           </div>
         </div>

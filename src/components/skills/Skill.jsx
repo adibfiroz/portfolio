@@ -57,6 +57,23 @@ const Skill = () => {
             <div className="slide">Agile</div>
           </div>
         </div>
+
+        <div className="slider">
+          <div className="slide-track1">
+            <div className="slide">Supabase</div>
+            <div className="slide">Tailwind</div>
+            <div className="slide">No sql</div>
+            <div className="slide">Vite</div>
+            <div className="slide">vercel</div>
+            <div className="slide">stripe</div>
+            <div className="slide">Supabase</div>
+            <div className="slide">Tailwind</div>
+            <div className="slide">No sql</div>
+            <div className="slide">Vite</div>
+            <div className="slide">vercel</div>
+            <div className="slide">stripe</div>
+          </div>
+        </div>
       </div>
     </div>
   );

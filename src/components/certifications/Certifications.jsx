@@ -78,6 +78,7 @@ const Certifications = () => {
       )}
       <div className="container">
         <h2>Certifications</h2>
+        <p className="viewpop">Click on below to view</p>
         <div className="certGall">
           {certif.map((photo, i) => (
             <div

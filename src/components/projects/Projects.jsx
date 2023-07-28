@@ -1,12 +1,24 @@
 import React, { useEffect, useState } from "react";
 import "./projects.scss";
 import ProjectList from "../projectList/ProjectList";
-import { videoapp, shopapp, bookingapp, fiverrapp, blogapp } from "../../data";
+import {
+  videoapp,
+  shopapp,
+  bookingapp,
+  fiverrapp,
+  blogapp,
+  spotifyclone,
+} from "../../data";
 
 const Projects = () => {
-  const [selected, setSelected] = useState("fiverr");
+  const [selected, setSelected] = useState("spotify");
   const [data, setData] = useState([]);
   const list = [
+    {
+      id: "spotify",
+      title: "Spotify clone",
+      giturl: "https://github.com/adibfiroz/spotify-clone",
+    },
     {
       id: "fiverr",
       title: "Fiverr",
@@ -36,6 +48,9 @@ const Projects = () => {
 
   useEffect(() => {
     switch (selected) {
+      case "spotify":
+        setData(spotifyclone);
+        break;
       case "fiverr":
         setData(fiverrapp);
         break;
