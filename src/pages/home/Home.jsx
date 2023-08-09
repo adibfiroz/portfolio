@@ -11,6 +11,7 @@ import Qualifications from "../../components/qualifications/Qualifications";
 import Certifications from "../../components/certifications/Certifications";
 import EmpMonth from "../../components/empMonth/EmpMonth";
 import Contact from "../../components/contact/Contact";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -29,6 +30,9 @@ const Home = () => {
     <div className="home">
       <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+      <a href="#contact" className="openwork">
+        Open to work
+      </a>
       <div className="sections">
         <Intro />
         <Work />

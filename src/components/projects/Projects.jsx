@@ -11,18 +11,18 @@ import {
 } from "../../data";
 
 const Projects = () => {
-  const [selected, setSelected] = useState("spotify");
+  const [selected, setSelected] = useState("fiverr");
   const [data, setData] = useState([]);
   const list = [
-    {
-      id: "spotify",
-      title: "Spotify clone",
-      giturl: "https://github.com/adibfiroz/spotify-clone",
-    },
     {
       id: "fiverr",
       title: "Fiverr",
       giturl: "https://github.com/adibfiroz/projects/tree/fiverrapp",
+    },
+    {
+      id: "spotify",
+      title: "Spotify clone",
+      giturl: "https://github.com/adibfiroz/spotify-clone",
     },
     {
       id: "blog",
@@ -48,11 +48,11 @@ const Projects = () => {
 
   useEffect(() => {
     switch (selected) {
-      case "spotify":
-        setData(spotifyclone);
-        break;
       case "fiverr":
         setData(fiverrapp);
+        break;
+      case "spotify":
+        setData(spotifyclone);
         break;
       case "booking":
         setData(bookingapp);

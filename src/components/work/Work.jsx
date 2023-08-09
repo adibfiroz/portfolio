@@ -43,6 +43,7 @@ const Work = () => {
                   <li>
                     Worked in agile environment on software development cylce.
                   </li>
+                  <li>and much more...</li>
                 </ul>
               </div>
             </div>
