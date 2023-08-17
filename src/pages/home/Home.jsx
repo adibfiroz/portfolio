@@ -31,6 +31,10 @@ const Home = () => {
       <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <a href="#contact" className="openwork">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
         Open to work
       </a>
       <div className="sections">

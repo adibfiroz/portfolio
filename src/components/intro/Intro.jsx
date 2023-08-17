@@ -35,7 +35,7 @@ const Intro = () => {
               style={{ backgroundImage: `url(${BackgroundPic})` }}
             >
               <div className="exp">
-                <div className="expl">3</div>
+                <div className="expl">3+</div>
                 <div className="expr">
                   Years of
                   <br />
