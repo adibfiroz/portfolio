@@ -22,7 +22,7 @@ const Work = () => {
             </div>
             <div className="workFlex" style={{ marginTop: "20px" }}>
               <CalendarMonthIcon className="icon" />
-              <div className="mothshut">2020 - working</div>
+              <div className="mothshut">2020 July - 2023 October</div>
             </div>
             <div className="workFlex" style={{ marginTop: "20px" }}>
               <DescriptionIcon className="icon" />
