@@ -17,7 +17,7 @@ const Work = () => {
             <div className="workFlex">
               <BusinessIcon className="icon" />
               <div className="mothshut">
-                MouthShut.com - <i>Frontend Developer</i>{" "}
+                MouthShut.com
               </div>
             </div>
             <div className="workFlex" style={{ marginTop: "20px" }}>
