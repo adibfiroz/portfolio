@@ -30,7 +30,7 @@ const Home = () => {
     <div className="home">
       <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-      <span className="notice">Notice Period: Immdediate</span>
+      <span className="notice">Notice Period: Immediate</span>
       <a href="#contact" className="openwork">
         <span></span>
         <span></span>
