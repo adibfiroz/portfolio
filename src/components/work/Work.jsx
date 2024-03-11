@@ -11,7 +11,36 @@ const Work = () => {
         <h2 className="workTitle">Work Experience</h2>
         <div className="workcontainer">
           <div className="workl">
-            <img src="/img/work.jpg" alt="work" />
+          <div className="workFlex">
+              <BusinessIcon className="icon" />
+              <div className="mothshut">
+                Acoup
+              </div>
+            </div>
+            <div className="workFlex" style={{ marginTop: "20px" }}>
+              <CalendarMonthIcon className="icon" />
+              <div className="mothshut">2020 Jan - 2024 March</div>
+            </div>
+            <div className="workFlex" style={{ marginTop: "20px" }}>
+              <DescriptionIcon className="icon" />
+              <div className="mothshut">
+                My work at Acoup
+                <ul>
+                  <li>
+                  This is what a senior developer told me when I was hired. After my
+                  interview there were 5 to 6 more people with twice as much experience,
+                  but they said I was the fastest one of them.
+                  </li>
+                  <li>
+                  Learned Laravel php framework.
+                  </li>
+                  <li>Ensuring an optimal user experience across devices is a cornerstone of my approach. I've consistently delivered responsive designs, leveraging media queries and flexible grid systems to guarantee a seamless transition from desktop to mobile.</li>
+                  <li>
+                  In the fast-paced world of front-end development, staying current with the latest trends and technologies is paramount. Regularly participating in courses online communities, I bring fresh insights and best practices to every project.
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
           <div className="workr">
             <div className="workFlex">
@@ -27,7 +56,7 @@ const Work = () => {
             <div className="workFlex" style={{ marginTop: "20px" }}>
               <DescriptionIcon className="icon" />
               <div className="mothshut">
-                Working at MouthShut.com for 3 years.
+              Worked at MouthShut.com for 3 years.
                 <ul>
                   <li>
                     my work invovles development & maintainence of the company
@@ -43,7 +72,9 @@ const Work = () => {
                   <li>
                     Worked in agile environment on software development cylce.
                   </li>
-                  <li>and much more...</li>
+                  <li>Quickly analyzing problems and devising effective and efficient solutions.
+                  Diagnosing and resolving issues in a systematic manner.
+                  </li>
                 </ul>
               </div>
             </div>
