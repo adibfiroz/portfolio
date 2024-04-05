@@ -46,7 +46,7 @@ const Work = () => {
             <div className="workFlex">
               <BusinessIcon className="icon" />
               <div className="mothshut">
-                MouthShut.com <i>Mumbai, India</i>
+                MouthShut.com - <i>Mumbai, India</i>
               </div>
             </div>
             <div className="workFlex" style={{ marginTop: "20px" }}>
