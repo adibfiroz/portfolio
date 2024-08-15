@@ -1,0 +1,35 @@
+{
+  "name": "portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "postinstall": "prisma generate"
+  },
+  "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "@emotion/react": "^11.13.0",
+    "@emotion/styled": "^11.13.0",
+    "@mui/icons-material": "^5.16.7",
+    "@mui/material": "^5.16.7",
+    "@prisma/client": "^5.18.0",
+    "framer-motion": "^11.3.27",
+    "next": "14.2.5",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-simple-maps": "^3.0.0",
+    "react-slick": "^0.30.2",
+    "sass": "^1.77.8",
+    "slick-carousel": "^1.8.1",
+    "typewriter-effect": "^2.21.0"
+  },
+  "devDependencies": {
+    "@types/node": "22.3.0",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.5",
+    "prisma": "^5.18.0"
+  }
+}

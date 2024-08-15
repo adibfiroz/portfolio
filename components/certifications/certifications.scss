@@ -1,0 +1,113 @@
+@import "/app/styles.scss";
+
+.certifications {
+
+
+    .slidercert {
+        background-color: rgba(0,0,0,.8);
+        height: 100vh;
+        left: 0;
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 1000;
+        align-items: center;
+        display: flex;
+
+        .close {
+            font-size: 30px;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+        }
+
+        .arrow, .close {
+            color: #d3d3d3;
+            cursor: pointer;
+        }
+
+        .arrow {
+            margin: 20px;
+
+            @include mobile{
+                position: absolute;
+                background-color: rgba(0,0,0,.6);
+                padding: 5px;
+            }
+        }
+
+        .arrow:last-child {
+            right: 0;
+        }
+
+        .sliderWrapper {
+            align-items: center;
+            display: flex;
+            height: 100%;
+            justify-content: center;
+            width: 100%;
+
+            .sliderImg {
+                height: 80vh;
+                object-fit: contain;
+                width: 100%;
+            }
+        }
+        
+    }
+    .container {
+        max-width: 1100px;
+        margin: auto;
+
+        .viewpop {
+            text-align: center;
+            color: #737583;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #64b8fb;
+            font-weight: bold;
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 10px;
+
+            
+            @include mobile{
+                font-size: 25px;
+           }
+        }
+
+        .certGall {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            padding: 0 20px;
+
+            @include mobile{
+              gap: 5px;
+              grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .gallCard {
+                height: 200px;
+                cursor: pointer;
+
+                @include mobile-sm{
+                    height: 130px;
+                }
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+.scrollHide {
+    overflow: hidden;
+}

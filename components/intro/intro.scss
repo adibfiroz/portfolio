@@ -1,0 +1,297 @@
+@import "/app/styles.scss";
+@keyframes moveGreen {
+    0% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+  
+  .homeBanner {
+      background: radial-gradient(34.06% 18.04% at 50% 95.38%, rgba(77, 75, 223, 0.3) 0%, rgba(184, 223, 75, 0) 100%),
+      radial-gradient(31.98% 35.81% at 14.11% 95.43%, rgba(77, 75, 223, 0.302) 0%, rgba(184, 223, 75, 0) 100%),
+      radial-gradient(42.62% 34.36% at 82.24% 61.92%, rgba(77, 75, 223, 0.3) 0%, rgba(184, 223, 75, 0) 100%),
+      radial-gradient(27.86% 22.47% at 94.43% 5.09%, rgba(77, 75, 223, 0.3) 0%, rgba(184, 223, 75, 0) 100%),
+      radial-gradient(48.8% 34.28% at 1.2% 14.23%, #4b4ddf 0%, rgba(77, 75, 223, 0.3) 0.01%, rgba(184, 223, 75, 0) 100%),
+      #000000;
+    background-size: 200% 200%;
+    animation: moveGreen 20s infinite linear;
+  }
+  
+  .blue-gradient {
+    background: linear-gradient(61deg, #64b8fb 6.28%, #217bfe 76.97%);
+  }
+  
+.intro {
+    position: relative;
+    height: 100vh;
+
+    .backimg {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        right: 0;
+    }
+
+    .image {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+
+        @include mobile{
+            background-position: top;
+          }
+    }
+
+  
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            height: 100%;
+            position: relative;
+
+            .fistn {
+                position: absolute;
+                color: transparent;
+                -webkit-text-stroke: 1px #fff;
+                opacity: .1;
+                font-size: 120px;
+                top: -28px;
+                right: 0;
+                
+                @include mobile {
+                    display: none;
+                }
+            }
+        }
+
+        .introFlex {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            
+            @include mobile{
+                flex-direction: column-reverse;
+                justify-content: center;
+            }
+
+            .introl {
+                padding-left: 20px;
+
+                @include mobile{ 
+                    padding-left: 0;
+                }
+                
+                .title {
+                    overflow: hidden;
+                    color: #64b8fb ;
+                    font-size: 25px;
+
+                    @include mobile{ 
+                        font-size: 20px;
+                    }
+                  }
+                  
+                
+                .txt1 {
+                    color: #fff;
+                    font-size: 30px;
+                    font-weight: 600;
+
+                    @include mobile{
+                        text-align: center;
+                        font-size: 18px;
+                        margin-top: 20px;
+                    }
+                }
+
+                .name {
+                    color: #fff;
+                    font-size: 65px;
+                    margin: 8px 0;
+
+                    @include mobile{
+                        text-align: center;
+                        margin: 5px 0;
+                        font-size: 40px;
+                    }
+                }
+
+                .job {
+                    color: #142eb5;
+                    font-size: 25px;
+                    font-weight: bold;
+                    height: 50px;
+                    margin-top: 5px;
+
+
+                    @include mobile{
+                        text-align: center;
+                        font-size: 20px;
+                        // margin-top: 10px;
+                        // height: 30px;
+                    }
+                }
+
+                .contact {
+                    margin-top: 30px;
+
+                    @include mobile{
+                        margin-top: 20px;
+                    }
+
+                    a {
+                        font-size: 16px;
+                        font-weight: 600;
+                        color: #fff;
+                        width: fit-content;
+                        display: block;
+                        padding: 10px 20px;
+                        border-radius: 20px;
+
+                        
+                        @include mobile{
+                            margin: auto;
+                        }
+                    }
+                }
+            }
+
+            .intror {
+                padding-right: 20px;
+
+                @include mobile{
+                    padding-right: 0px;
+                }
+
+
+                .imgContainer {
+                    width: 350px;
+                    height: 380px;
+                    position: relative;
+                    background-image: url(/img/adib.png);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: top;
+                    border-radius: 15px;
+
+                    @include mobile{
+                        width: 160px;
+                        height: 180px;
+                    }
+
+                    .trophy {
+                        position: absolute;
+                        top: -22px;
+                        right: -53px;
+                        padding: 6px 20px;
+                        background-color: #fff;
+                        display: none;
+                        border-radius: 15px;
+
+                        @include mobile{
+                           display: none;
+                        }
+
+                        img {
+                            width: 60px;
+                            height: 100px;
+                        }
+                    }
+                    
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 15px;
+                    }
+
+                    .exp {
+                        position: absolute;
+                        top: 50px;
+                        background-color: #fff;
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        border-radius: 10px;
+                        padding: 5px 20px;
+                        right: -95px;
+
+                                        
+                        @include mobile{
+                           display: none;
+                        }
+
+                        .expl {
+                            font-size: 50px;
+                            font-weight: bold;
+                            color: #4cc5db;
+                        }
+
+                        .expr {
+                            font-size: 16px;
+                            color: #000;
+                            font-weight: bold;
+                        }
+                    }
+                }
+
+
+            }
+        }
+    .lastn {
+        position: absolute;
+        color: transparent;
+        -webkit-text-stroke: 1px #fff;
+        opacity: .1;
+        font-size: 120px;
+        right: -60px;
+        top: 300px;
+        transform: rotate(90deg);
+
+        @include mobile {
+            display: none;
+        }
+    }
+  
+}
+
+@keyframes moveGreen {
+    0% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+  
+  .homeBanner {
+      background: radial-gradient(34.06% 18.04% at 50% 95.38%, rgba(77, 75, 223, 0.3) 0%, rgba(184, 223, 75, 0) 100%),
+      radial-gradient(31.98% 35.81% at 14.11% 95.43%, rgba(77, 75, 223, 0.302) 0%, rgba(184, 223, 75, 0) 100%),
+      radial-gradient(42.62% 34.36% at 82.24% 61.92%, rgba(77, 75, 223, 0.3) 0%, rgba(184, 223, 75, 0) 100%),
+      radial-gradient(27.86% 22.47% at 94.43% 5.09%, rgba(77, 75, 223, 0.3) 0%, rgba(184, 223, 75, 0) 100%),
+      radial-gradient(48.8% 34.28% at 1.2% 14.23%, #4b4ddf 0%, rgba(77, 75, 223, 0.3) 0.01%, rgba(184, 223, 75, 0) 100%),
+      #000000;
+    background-size: 200% 200%;
+    animation: moveGreen 20s infinite linear;
+  }
+  

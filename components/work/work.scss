@@ -1,0 +1,119 @@
+@import "/app/styles.scss";
+
+  
+.blue-gradient {
+    background: linear-gradient(61deg, #64b8fb 6.28%, #217bfe 76.97%);
+  }
+  
+
+.work {
+    margin: 50px 0;
+
+    @include mobile {
+        margin: 30px 0;
+    }
+
+    .container {
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    .workTitle {
+        color: #64b8fb;
+        font-weight: bold;
+        text-align: center;
+        font-size: 30px;
+        margin-bottom: 30px;
+
+        @include mobile {
+            font-size: 25px;
+            margin-bottom: 5px;
+        }
+
+    }
+
+    .workcontainer {
+        display: flex;
+        gap: 50px;
+        padding: 20px;
+
+        @include mobile {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .workl {
+            flex: 1;
+            padding: 20px;
+            background-color: #111827;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, .10);
+            border-radius: 10px;
+
+            @include mobile {
+                text-align: left;
+            }
+
+            img {
+                width: 400px;
+                height: 400px;
+                animation: move1 3s infinite ease alternate;
+
+                @include mobile {
+                    width: 250px;
+                    height: 250px;
+                }
+            }
+        }
+
+        .workr {
+            flex: 1;
+            padding: 20px;
+            background-color: #111827;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, .10);
+            border-radius: 10px;
+
+            @include mobile {
+                text-align: left;
+            }
+        }
+
+        .workFlex {
+            display: flex;
+            gap: 20px;
+
+            .icon {
+                color: #217bfe;
+            }
+
+            .mothshut {
+                color: #d8d3d3;
+                font-size: 16px;
+                font-weight: 500;
+
+                a{
+                    text-decoration: underline;
+                    color: #64b8fb;
+                }
+
+                ul {
+                    margin-left: 18px;
+
+                    li {
+                        margin-top: 15px;
+                    }
+                }
+            }
+        }
+    }
+
+
+    @keyframes move1 {
+        from {
+            transform: translateY(-15px);
+        }
+
+        to {
+            transform: translateY(0px) scale(1.03);
+        }
+    }
+}

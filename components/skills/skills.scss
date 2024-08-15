@@ -1,0 +1,128 @@
+@import "/app/styles.scss";
+
+.skill {
+    padding: 50px 0;
+
+    @include mobile {
+        padding: 30px 0;
+      }
+
+
+    .container {
+        max-width: 1000px;
+        margin: auto;
+
+        h2 {
+            color: #142eb5;
+            font-weight: bold;
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 15px;
+            text-align: center;
+
+            @include mobile {
+                font-size: 25px;
+              }
+       
+        }
+
+        p {
+            color: #4b4343;
+            font-size: 18px;
+            font-weight: 500;
+            text-align: center;
+            margin-bottom: 25px;
+
+            @include mobile {
+                font-size: 16px;
+              }
+       
+        }
+    }
+}
+
+@mixin white-gradient {
+	background: linear-gradient(to right, rgba(124, 200, 255, 0.39) 0%, rgb(255 255 255 / 0%) 100%);
+}
+
+$animationSpeed: 35s;
+
+// Animation
+@keyframes scroll {
+	0% { 
+        transform: translateX(0); 
+    }
+	100% {
+        transform: translateX(calc(-170px * 6));       
+    }
+}
+
+@keyframes scroll1 {
+	0% { 
+        transform: translateX(calc(-170px * 6))
+    }
+	100% {
+        transform: translateX(0); 
+    }
+}
+
+// Styling
+.slider {
+	margin: auto;
+	overflow:hidden;
+	position: relative;
+	max-width: 700px;
+    margin-top: 20px;
+	
+	&::before,
+	&::after {
+		@include white-gradient;
+		content: "";
+		height: 100px;
+		position: absolute;
+		width: 80px;
+		z-index: 2;
+	}
+	
+	&::after {
+		right: 0;
+		top: 0;
+		transform: rotateZ(180deg);
+	}
+
+	&::before {
+		left: 0;
+		top: 0;
+	}
+	
+	.slide-track {
+		animation: scroll $animationSpeed linear infinite;
+		display: flex;
+		width: calc(170px * 12);
+        gap: 80px;
+
+        @include mobile {
+            gap: 60px;
+        }
+	}
+
+    .slide-track1 {
+		animation: scroll1 $animationSpeed linear infinite;
+		display: flex;
+		width: calc(170px * 12);
+        gap: 80px;
+
+        @include mobile {
+            gap: 60px;
+        }
+	}
+	
+	.slide {
+		padding: 10px 0;
+        color: #fff;
+        font-weight: 500;
+        font-size: 20px;
+        font-style: italic;
+        text-align: center;       
+	}
+}

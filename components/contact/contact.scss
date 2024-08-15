@@ -1,0 +1,83 @@
+@import "/app/styles.scss";
+
+button {
+    background: linear-gradient(61deg, #64b8fb 6.28%, #217bfe 76.97%);
+  }
+
+.contacts {
+    background-color: #142eb5;
+    height: 100vh;
+    scroll-snap-align: center;
+
+    .container {
+       width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 50px;
+        height: 100%;
+
+        @include mobile{
+            flex-direction: column;
+        }
+
+        .cl {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            @include mobile{
+                justify-content: center;
+            }
+
+            form {
+                width: 400px;
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+
+                @include mobile{
+                    width: 100%;
+                    padding: 20px;                
+                } 
+
+                .title {
+                    font-size: 25px;
+                    color: #fff;
+                    font-weight: 600;
+                }
+
+                input, textarea {
+                    padding: 20px;
+                    border: none;
+                    background-color: #e8e6e6;
+                    border-radius: 5px;
+                    outline: none;
+                    font-size: 16px;
+                    resize: none;
+                    color: #242c24;
+                }
+
+                button {
+                    background-color: #4cc5db;
+                    padding: 20px;
+                    font-size: 18px;
+                    font-weight: 600;
+                    color: #fff;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+            }
+
+        }
+
+        .cr {
+            flex: 1;
+
+            @include mobile{
+                display: none;
+            }
+        }
+    }
+}

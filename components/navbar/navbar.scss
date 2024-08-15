@@ -1,0 +1,104 @@
+@import "/app/styles.scss";
+
+.navbar {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    transition: 0.5s all ease;
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 35px;
+
+        @include mobile{
+            padding: 10px 15px;
+          }
+        
+
+        .headLeft {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+
+            img {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+
+                @include mobile{
+                    width: 35px;
+                    height: 35px;
+                }
+                
+            }
+
+            span {
+                font-size: 30px;
+                font-weight: 600;
+                color: #fff;
+
+                @include mobile{
+                    font-size: 25px;
+                }
+                
+            }
+        }
+
+        .headRight {
+            
+            .hamburger {
+                width: 25px;
+                height: 21px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                cursor: pointer;
+
+                @include mobile{
+                    width: 20px;
+                    height: 16px;
+                  }
+                
+        
+                span {
+                  width: 100%;
+                  height: 3px;
+                  background-color: #fff;
+                  transform-origin: left;
+                  transition: all 1s ease;
+
+                  @include mobile{
+                    height: 2px;
+                  }
+          
+                }
+              }
+        }
+        &.active {
+            background-color: transparent;
+        
+            .hamburger {
+              span {
+                &:first-child {
+                  transform: rotate(45deg);
+                }
+                &:nth-child(2) {
+                  opacity: 0;
+                }
+                &:last-child {
+                  transform: rotate(-45deg);
+                }
+              }
+            }
+          }
+    }
+
+    &.navActive {
+        box-shadow: 0 0 10px rgba(0,0,0,.1);
+        backdrop-filter: blur(50px);
+    }
+}
