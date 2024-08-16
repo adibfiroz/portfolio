@@ -6,6 +6,7 @@
   border-radius: 10px;
   cursor: pointer;
   font-weight: 500;
+  color: #fff;
 
   .gitlink {
     position: absolute;
@@ -37,6 +38,6 @@
   &.active {
     background-color:#142eb5;
     color: white;
-    padding: 5px 15px;
+    padding: 7px 15px;
   }
 }
