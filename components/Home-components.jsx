@@ -58,7 +58,6 @@ const HomeComponents = () => {
         console.error("Failed to fetch views:", error);
       }
     };
-
     fetchViews();
   }, []);
 
