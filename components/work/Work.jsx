@@ -24,7 +24,7 @@ const Work = () => {
                 <a href="https://www.acoup.com/" target="_blank">
                   Acoup
                 </a>{" "}
-                - <i>Dubai, UAE</i>
+                - <i>Dubai, UAE</i> - <i>Onsite</i>
               </div>
             </div>
             <div className="workFlex" style={{ marginTop: "20px" }}>
@@ -75,7 +75,7 @@ const Work = () => {
                 <a href="https://www.mouthshut.com/" target="_blank">
                   MouthShut.com
                 </a>{" "}
-                - <i>Mumbai, India</i>
+                - <i>Mumbai, India</i> - <i>Onsite / hybrid</i>
               </div>
             </div>
             <div className="workFlex" style={{ marginTop: "20px" }}>

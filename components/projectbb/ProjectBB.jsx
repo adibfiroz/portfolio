@@ -16,8 +16,11 @@ const ProjectBB = () => {
   };
 
   return (
-    <div className="projectbb" id="projects">
-      <div className="container">
+    <div
+      className="projectbb bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-blue-900 via-blue-950 to-blue-900"
+      id="projects"
+    >
+      <div className="container ">
         <div className="bbflex" style={{ marginBottom: "40px" }}>
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -50,10 +53,10 @@ const ProjectBB = () => {
           >
             <Slider {...settings}>
               <div>
-                <img src="/img/future1.png" />
+                <img src="/img/future2.png" />
               </div>
               <div>
-                <img src="/img/future2.png" />
+                <img src="/img/future1.png" />
               </div>
               <div>
                 <img src="/img/future3.png" />

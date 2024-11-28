@@ -4,6 +4,10 @@
 .bg_View {
     background: linear-gradient(61deg, #64b8fb 6.28%, #217bfe 76.97%);
     color: #fff;
+
+    .vtxt {
+        font-size: 13px;
+    }
 }
 
 @keyframes pulse {
@@ -11,10 +15,7 @@
         opacity: .5;
     }
 }
-.animate-pulse {
-    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-}
-
+    
 .home {
     .openwork span {
         position: absolute;

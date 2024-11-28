@@ -36,7 +36,7 @@ const Contact = () => {
   return (
     <div className="contacts" id="contact">
       <div className="container">
-        <div className="cl">
+        <div className="cl py-5 md:py-10">
           <form ref={ref} onSubmit={handleSubmit}>
             <div className="title">Contact Us</div>
             <motion.input
