@@ -35,17 +35,17 @@ const HomeComponents = () => {
     });
   });
 
-  useEffect(() => {
-    const updateViews = async () => {
-      try {
-        await UpdateViews();
-      } catch (error) {
-        console.error("Failed to update views:", error);
-      }
-    };
+  // useEffect(() => {
+  //   const updateViews = async () => {
+  //     try {
+  //       await UpdateViews();
+  //     } catch (error) {
+  //       console.error("Failed to update views:", error);
+  //     }
+  //   };
 
-    updateViews();
-  }, []);
+  //   updateViews();
+  // }, []);
 
   const [views, setViews] = useState(0);
 
@@ -82,6 +82,7 @@ const HomeComponents = () => {
                 <div className="bg_View">
                   <VisibilityIcon className="animate-pulse" />
                   {views}
+                  <span className=" text-sm">views</span>
                 </div>
               </Tooltip>
             </div>
@@ -110,7 +111,7 @@ const HomeComponents = () => {
           <div className="container">
             <img src="/img/AF.png" alt="af" />
             <span>
-              Made with Next js {new Date().getFullYear()} By Adib Firoz
+              Made with Next js @23 - {new Date().getFullYear()} By Adib Firoz
             </span>
           </div>
         </div>

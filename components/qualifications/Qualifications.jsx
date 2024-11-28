@@ -8,8 +8,8 @@ const Qualifications = () => {
       <div className="container">
         <h2>My Qualifications</h2>
         <div className="qflex">
-          <div className="ql">
-            <div className="qcard">
+          <div className="ql ">
+            <div className="qcard shadow-lg shadow-white/5">
               <div className="qcardl">
                 <img src="/img/ssc.jpg" alt="ssc" />
               </div>
@@ -30,7 +30,7 @@ const Qualifications = () => {
             </div>
           </div>
           <div className="qr">
-            <div className="qcard">
+            <div className="qcard shadow-lg shadow-white/5">
               <div className="qcardl">
                 <img src="/img/diploma.jpg" alt="ssc" />
               </div>
@@ -52,7 +52,7 @@ const Qualifications = () => {
           </div>
         </div>
         <div className="degree">
-          <div className="qcard">
+          <div className="qcard shadow-lg shadow-white/5">
             <div className="qcardl">
               <img src="/img/degree.png" alt="ssc" />
             </div>

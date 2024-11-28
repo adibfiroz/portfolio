@@ -3,7 +3,7 @@ import "./skills.scss";
 
 const Skill = () => {
   return (
-    <div className="skill blue-gradient">
+    <div className="skill bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-blue-900 via-blue-950 to-blue-900">
       <div className="container">
         <h2>My Skills</h2>
         <p>I keep upgrading myself with new skills</p>
