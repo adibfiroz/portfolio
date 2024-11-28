@@ -35,17 +35,17 @@ const HomeComponents = () => {
     });
   });
 
-  // useEffect(() => {
-  //   const updateViews = async () => {
-  //     try {
-  //       await UpdateViews();
-  //     } catch (error) {
-  //       console.error("Failed to update views:", error);
-  //     }
-  //   };
+  useEffect(() => {
+    const updateViews = async () => {
+      try {
+        await UpdateViews();
+      } catch (error) {
+        console.error("Failed to update views:", error);
+      }
+    };
 
-  //   updateViews();
-  // }, []);
+    updateViews();
+  }, []);
 
   const [views, setViews] = useState(0);
 
@@ -58,7 +58,6 @@ const HomeComponents = () => {
         console.error("Failed to fetch views:", error);
       }
     };
-
     fetchViews();
   }, []);
 
