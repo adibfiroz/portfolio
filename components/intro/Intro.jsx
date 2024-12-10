@@ -63,7 +63,8 @@ const Intro = () => {
                 className="contact"
               >
                 <a href="#contact" className="blue-gradient rounded-xl">
-                  <HandshakeOutlined className="text-xl mr-2" /> Let's Connect
+                  <HandshakeOutlined className="text-xl mr-2" /> Let{`'`}s
+                  Connect
                 </a>
               </motion.div>
             </div>
