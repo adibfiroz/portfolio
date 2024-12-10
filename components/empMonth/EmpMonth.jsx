@@ -1,24 +1,24 @@
 import React from "react";
-import "./empMonth.scss";
-import { motion } from "framer-motion";
+import Card from "../card";
 
 const EmpMonth = () => {
   return (
-    <div className="empMonth">
-      <div className="container">
-        <div className="empFlex">
-          <motion.h2
-            initial={{ opacity: 0, y: -50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-          >
+    <div className="my-20">
+      <div className="container mx-auto max-w-4xl p-5">
+        <div className="">
+          <h2 className="text-white font-bold text-3xl md:text-5xl text-center">
             Employee of the Month
-          </motion.h2>
-          <div className="empphoto">
-            <img className="trophy" src="/img/trophy.png" alt="" />
-            <img className="emp" src="/img/emp.jpg" alt="" />
-          </div>
+          </h2>
+          <Card className="mt-16">
+            <div className="grid gap-10 sm:grid-cols-2">
+              <div className=" h-72 sm:h-96 mx-auto ">
+                <img className="h-full" src="/img/trophy.png" alt="" />
+              </div>
+              <div className="inline-flex items-center">
+                <img className="emp" src="/img/emp.jpg" alt="" />
+              </div>
+            </div>
+          </Card>
         </div>
       </div>
     </div>

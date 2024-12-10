@@ -1,118 +1,84 @@
 import React from "react";
 import "./projectbb.scss";
-import ArrowOutwardRoundedIcon from "@mui/icons-material/ArrowOutwardRounded";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import { motion } from "framer-motion";
+import Link from "next/link";
+import { ArrowOutwardOutlined } from "@mui/icons-material";
+import Card from "../card";
 
 const ProjectBB = () => {
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
+  const featuredProjects = [
+    {
+      id: 1,
+      name: "Future AI",
+      desc: "It's an Generative AI website using replicate API. you can create Images, upscale, caption and chat with the model. interact with community images, follow users, make your images private and much more.",
+      tech: "next js, react, stripe, mongoDB, prisma, shadcn/ui",
+      url: "https://future-ai.vercel.app/",
+      img: "img/future2.png",
+    },
+    {
+      id: 2,
+      name: "Bluwberry",
+      desc: "A Software based app where user's can write reviews on softwares. saved, search and more...",
+      tech: "react, express js, mongoDB, node js",
+      url: "https://bluwbery.onrender.com/",
+      img: "img/b1.png",
+    },
+    {
+      id: 3,
+      name: "Pixel AI",
+      desc: "Gallery of images but only for AI. much like pexels, you can download, like and manage your images through collections.",
+      tech: "next js, react, stripe, mongoDB, prisma, shadcn/ui",
+      url: "https://pexel-ai.vercel.app/",
+      img: "img/pixel-ai2.png",
+    },
+  ];
 
   return (
-    <div
-      className="projectbb bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-blue-900 via-blue-950 to-blue-900"
-      id="projects"
-    >
-      <div className="container ">
-        <div className="bbflex" style={{ marginBottom: "40px" }}>
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="bbl"
-          >
-            <div className="pName">Project: Future Ai</div>
-            <div className="pDesc">
-              It{`'`}s an Ai Saas website using replicate API. you create Images
-              and chat with the model. interact with community images, follow
-              users, also make your images private and much more.
-            </div>
-            <div className="techUse">
-              Tech: next js, node, replicate, mongoDB, cloudinary, shadcn/ui
-            </div>
-            <div className="viewBB">
-              <a href="https://future-ai.vercel.app/" target="_blank">
-                View project <ArrowOutwardRoundedIcon className="icon" />
-              </a>
-            </div>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="bbr"
-          >
-            <Slider {...settings}>
-              <div>
-                <img src="/img/future2.png" />
+    <section className="my-10 projectbb" id="projects">
+      <div className="container">
+        <h2 className="text-white text-3xl md:text-5xl">Featured Projects</h2>
+        <p className=" text-center md:text-lg lg:text-xl max-w-md mx-auto text-white/60 mt-4">
+          See how i tranformed concepts into engaging digital experiences.
+        </p>
+
+        <div className="flex flex-col gap-20 mt-10 md:mt-20 px-5">
+          {featuredProjects.map((project, i) => (
+            <Card
+              className="px-8 pt-8 pb-0 md:px-12 md:pt-12 lg:pt-16 lg:px-20 sticky"
+              key={project.id}
+              style={{ top: `calc(80px + ${i * 40}px` }}
+            >
+              <div className="lg:grid lg:grid-cols-2 lg:gap-16">
+                <div className="lg:pb-16">
+                  <h3 className="text-2xl md:text-4xl text-white font-semibold">
+                    {project.name}
+                  </h3>
+                  <hr className="border-t-2 border-white/5 mt-4 md:mt-5" />
+                  <p className=" text-sm md:text-base text-white/50 mt-4 md:mt-5">
+                    {project.desc}
+                  </p>
+                  <p className="text-sm md:text-base text-white/50 mt-4">
+                    tech: {project.tech}.
+                  </p>
+                  <Link href={project.url} target="_blank">
+                    <button className=" text-white blue-gradient inline-flex items-center justify-center gap-2 font-semibold capitalize px-8 py-3 mt-8 w-full md:w-auto text-lg rounded-xl">
+                      Visit Live Site <ArrowOutwardOutlined />
+                    </button>
+                  </Link>
+                </div>
+
+                <div className=" relative">
+                  <img
+                    src={project.img}
+                    alt={project.name}
+                    className="mt-8 lg:mt-0 lg:absolute lg:h-full rounded-t-xl border border-white/20 lg:w-auto lg:max-w-none"
+                  />
+                </div>
               </div>
-              <div>
-                <img src="/img/future1.png" />
-              </div>
-              <div>
-                <img src="/img/future3.png" />
-              </div>
-              <div>
-                <img src="/img/future4.png" />
-              </div>
-            </Slider>
-          </motion.div>
-        </div>
-        <div className="bbflex">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="bbl"
-          >
-            <div className="pName">Project: Bluwberry</div>
-            <div className="pDesc">
-              Details: This project has products for softwares where you can
-              browse through different softwares and categories. you can write
-              reviews of software, saved them and more...
-            </div>
-            <div className="techUse">Tech: React, node, express, mongoDB</div>
-            <div className="viewBB">
-              <a href="https://bluwbery.onrender.com/" target="_blank">
-                View project <ArrowOutwardRoundedIcon className="icon" />
-              </a>
-            </div>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="bbr"
-          >
-            <Slider {...settings}>
-              <div>
-                <img src="/img/b1.png" />
-              </div>
-              <div>
-                <img src="/img/b2.png" />
-              </div>
-              <div>
-                <img src="/img/b3.png" />
-              </div>
-              <div>
-                <img src="/img/b4.png" />
-              </div>
-            </Slider>
-          </motion.div>
+            </Card>
+          ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

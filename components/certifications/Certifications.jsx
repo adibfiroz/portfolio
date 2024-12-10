@@ -82,10 +82,12 @@ const Certifications = () => {
           />
         </div>
       )}
-      <div className="container">
-        <h2>Certifications</h2>
-        <p className="viewpop">Click on below to view</p>
-        <div className="certGall">
+      <div className="container max-w-5xl">
+        <h2 className="text-white text-3xl md:text-5xl">Certifications</h2>
+        <p className="text-center md:text-lg lg:text-xl max-w-md mx-auto text-white/60">
+          Click on below to view
+        </p>
+        <div className="certGall mt-12">
           {certif.map((photo, i) => (
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}

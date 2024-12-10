@@ -1,34 +1,19 @@
 @import "/app/styles.scss";
 
   
-.blue-gradient {
-    background: linear-gradient(61deg, #64b8fb 6.28%, #217bfe 76.97%);
-  }
-  
+
 
 .work {
-    margin: 50px 0;
 
-    @include mobile {
-        margin: 30px 0;
-    }
 
     .container {
-        max-width: 1100px;
         margin: auto;
     }
 
     .workTitle {
-        color: #64b8fb;
         font-weight: bold;
         text-align: center;
-        font-size: 30px;
         margin-bottom: 30px;
-
-        @include mobile {
-            font-size: 25px;
-            margin-bottom: 5px;
-        }
 
     }
 
@@ -97,6 +82,7 @@
 
                 ul {
                     margin-left: 18px;
+                    list-style: disc;
 
                     li {
                         margin-top: 15px;

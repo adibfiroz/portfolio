@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect, useState } from "react";
 import "./projects.scss";
 import ProjectList from "../projectList/ProjectList";
@@ -70,10 +72,13 @@ const Projects = () => {
         setData(fiverrapp);
     }
   }, [selected]);
+
   return (
-    <div className="projects">
+    <div className="projects mb-32">
       <div className="container">
-        <h2 className="projectsTitle">My other web projects</h2>
+        <h2 className="projectsTitle text-white text-3xl md:text-5xl">
+          Other Projects
+        </h2>
         <div>
           <ul>
             {list.map((item) => (
