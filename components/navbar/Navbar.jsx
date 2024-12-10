@@ -18,7 +18,7 @@ const Navbar = ({ menuOpen, setMenuOpen }) => {
 
   return (
     <div className={"navbar " + (active && "navActive")}>
-      <div className="container">
+      <div className="container mx-auto">
         <div className={"nav " + (menuOpen && "active")}>
           <Link href="/">
             <div className="headLeft">

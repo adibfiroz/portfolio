@@ -83,14 +83,7 @@
   margin: 0;
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
 html {
-  scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
 }
 
@@ -102,6 +95,10 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.blue-gradient {
+  background: linear-gradient(61deg, #64b8fb 6.28%, #217bfe 76.97%);
 }
 
 @media (prefers-color-scheme: dark) {

@@ -56,7 +56,6 @@
         
     }
     .container {
-        max-width: 1100px;
         margin: auto;
 
         .viewpop {
@@ -68,16 +67,10 @@
         }
 
         h2 {
-            color: #64b8fb;
             font-weight: bold;
             text-align: center;
-            font-size: 30px;
             margin-bottom: 10px;
 
-            
-            @include mobile{
-                font-size: 25px;
-           }
         }
 
         .certGall {
@@ -87,7 +80,7 @@
             padding: 0 20px;
 
             @include mobile{
-              gap: 5px;
+              gap: 10px;
               grid-template-columns: repeat(2, minmax(0, 1fr));
             }
 

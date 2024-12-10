@@ -29,6 +29,7 @@
 .intro {
     position: relative;
     height: 100vh;
+    overflow: hidden;
 
     .backimg {
         position: absolute;
@@ -58,7 +59,6 @@
   
 
         .container {
-            max-width: 1100px;
             margin: auto;
             height: 100%;
             position: relative;
@@ -84,7 +84,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-
+            gap: 20px;
             
             @include mobile{
                 flex-direction: column-reverse;
@@ -163,7 +163,6 @@
                         width: fit-content;
                         display: block;
                         padding: 10px 20px;
-                        border-radius: 20px;
 
                         
                         @include mobile{
@@ -224,14 +223,14 @@
 
                     .exp {
                         position: absolute;
-                        top: 50px;
+                        bottom: 50px;
                         background-color: #fff;
                         display: flex;
                         align-items: center;
                         gap: 10px;
                         border-radius: 10px;
                         padding: 5px 20px;
-                        right: -95px;
+                        left: -95px;
 
                                         
                         @include mobile{
@@ -261,9 +260,8 @@
         -webkit-text-stroke: 1px #fff;
         opacity: .1;
         font-size: 120px;
-        right: -60px;
-        top: 300px;
-        transform: rotate(90deg);
+        bottom: -35px;
+        right: 30px;
 
         @include mobile {
             display: none;

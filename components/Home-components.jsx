@@ -19,6 +19,7 @@ import VisibilityIcon from "@mui/icons-material/Visibility";
 import Tooltip from "@mui/material/Tooltip";
 import UpdateViews from "../app/actions/update-views";
 import GetViews from "../app/actions/get-views";
+import TapeSection from "./tape";
 
 const HomeComponents = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -62,7 +63,7 @@ const HomeComponents = () => {
   }, []);
 
   return (
-    <div className="home">
+    <div className="home bg-gray-900">
       <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <Link href="#contact" className="openwork">
@@ -74,8 +75,9 @@ const HomeComponents = () => {
       </Link>
       <div className="sections">
         <Intro />
-        <div className="bg_social">
-          <div className="flex1">
+
+        <div className="bg_social blue-gradient">
+          <div className="flex1 container">
             <div>
               <Tooltip title="Views" placement="top">
                 <div className="bg_View">
@@ -101,6 +103,7 @@ const HomeComponents = () => {
         <Work />
         <ProjectBB />
         <Projects />
+        <TapeSection />
         <Skill />
         <Qualifications />
         <Certifications />

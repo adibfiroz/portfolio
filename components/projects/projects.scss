@@ -1,30 +1,15 @@
 @import "/app/styles.scss";
 .projects {
-    margin: 50px 0;
     position: relative;
-    margin-bottom: 80px;
-
-    
-    @include mobile{
-      margin: 30px 0;
-      margin-bottom: 80px;
-    }
 
     .container {
-        max-width: 1000px;
         margin: auto;
     }
 
     h2 {
-        color: #64b8fb;
         font-weight: bold;
         text-align: center;
-        font-size: 30px;
-        margin-bottom: 30px;
-
-        @include mobile{
-             font-size: 25px;
-        }
+        margin-bottom: 50px;
     }
 
   ul {
@@ -48,7 +33,7 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 30px;
+    padding: 25px 0;
 
     @include mobile{
       width: 100%;
