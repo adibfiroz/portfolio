@@ -14,7 +14,7 @@ const CardHeader = ({
         <div className={twMerge("flex flex-col", className)}>
             <div className="inline-flex items-center gap-2">
                 <img src="img/sparkle.png" width={20} height={20} alt="" />
-                <h3 className=" text-3xl">{title}</h3>
+                <h3 className=" text-3xl text-white">{title}</h3>
             </div>
             <p className="text-sm lg:text-base max-w-xs text-white/60 mt-2">
                 {desc}
