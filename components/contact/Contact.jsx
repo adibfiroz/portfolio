@@ -75,15 +75,15 @@ const Contact = () => {
           <div className="grid md:grid-cols-2 gap-10 py-6 relative">
             <div className=" inline-flex items-center justify-center p-5">
               <div className=" backdrop-blur-3xl text-sm lg:text-lg rounded-xl py-5 px-4 md:py-10 md:px-8 flex flex-col gap-5 bg-white/5">
-                <div className="inline-flex items-center gap-4">
+                <div className="inline-flex text-white items-center gap-4">
                   <LocationOnIcon className=" size-8 text-[#64b8fb]" />
                   <span>mira road, Mumbai, India</span>
                 </div>
-                <div className="inline-flex items-center gap-4">
+                <div className="inline-flex text-white items-center gap-4">
                   <CallIcon className=" size-8 text-[#64b8fb]" />
                   <span>+91 9702 384 323</span>
                 </div>
-                <div className="inline-flex items-center gap-4">
+                <div className="inline-flex text-white items-center gap-4">
                   <EmailIcon className=" size-8 text-[#64b8fb]" />
                   <span>adibfiroz9702@gmail.com</span>
                 </div>
@@ -105,7 +105,7 @@ const Contact = () => {
                 required
                 placeholder="Name"
                 name="name"
-                className="w-full outline outline-2 outline-white/10 p-4 rounded-lg mb-5"
+                className="w-full outline outline-2 bg-[#121212] outline-white/10 p-4 rounded-lg mb-5"
               />
               <motion.input
                 initial={{ opacity: 0, y: 20 }}
@@ -115,7 +115,7 @@ const Contact = () => {
                 required
                 placeholder="Email"
                 name="email"
-                className="w-full outline outline-2 outline-white/10 p-4 rounded-lg mb-5"
+                className="w-full outline outline-2 bg-[#121212] outline-white/10 p-4 rounded-lg mb-5"
               />
               <motion.textarea
                 initial={{ opacity: 0, y: 20 }}
@@ -126,7 +126,7 @@ const Contact = () => {
                 placeholder="Write your message"
                 name="message"
                 rows={8}
-                className="w-full outline outline-2 outline-white/10 p-4 rounded-lg mb-5 resize-none max-h-52"
+                className="w-full outline outline-2 bg-[#121212] outline-white/10 p-4 rounded-lg mb-5 resize-none max-h-52"
               />
               <motion.button
                 initial={{ opacity: 0, y: 20 }}
