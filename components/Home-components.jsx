@@ -38,31 +38,31 @@ const HomeComponents = () => {
     });
   });
 
-  // useEffect(() => {
-  //   const updateViews = async () => {
-  //     try {
-  //       await UpdateViews();
-  //     } catch (error) {
-  //       console.error("Failed to update views:", error);
-  //     }
-  //   };
+  useEffect(() => {
+    const updateViews = async () => {
+      try {
+        await UpdateViews();
+      } catch (error) {
+        console.error("Failed to update views:", error);
+      }
+    };
 
-  //   updateViews();
-  // }, []);
+    updateViews();
+  }, []);
 
   const [views, setViews] = useState(0);
 
-  // useEffect(() => {
-  //   const fetchViews = async () => {
-  //     try {
-  //       const views = await GetViews();
-  //       setViews(views);
-  //     } catch (error) {
-  //       console.error("Failed to fetch views:", error);
-  //     }
-  //   };
-  //   fetchViews();
-  // }, []);
+  useEffect(() => {
+    const fetchViews = async () => {
+      try {
+        const views = await GetViews();
+        setViews(views);
+      } catch (error) {
+        console.error("Failed to fetch views:", error);
+      }
+    };
+    fetchViews();
+  }, []);
 
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -97,7 +97,7 @@ const HomeComponents = () => {
     <div className="home bg-gray-900 ">
       <div className="fixed bottom-5 left-5 z-10 ">
         {isPlaying && <img src="img/music.gif" width={50} height={50} alt="" />}
-        <audio ref={audioRef} src="/blackmoor-2.mp3" loop />
+        <audio ref={audioRef} src="/blackmoor-2.MP3" loop />
         <button
           onClick={togglePlayPause}
           className="w-10 h-10 bg-blue-500 text-white rounded-full"
