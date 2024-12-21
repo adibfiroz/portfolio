@@ -38,31 +38,31 @@ const HomeComponents = () => {
     });
   });
 
-  // useEffect(() => {
-  //   const updateViews = async () => {
-  //     try {
-  //       await UpdateViews();
-  //     } catch (error) {
-  //       console.error("Failed to update views:", error);
-  //     }
-  //   };
+  useEffect(() => {
+    const updateViews = async () => {
+      try {
+        await UpdateViews();
+      } catch (error) {
+        console.error("Failed to update views:", error);
+      }
+    };
 
-  //   updateViews();
-  // }, []);
+    updateViews();
+  }, []);
 
   const [views, setViews] = useState(0);
 
-  // useEffect(() => {
-  //   const fetchViews = async () => {
-  //     try {
-  //       const views = await GetViews();
-  //       setViews(views);
-  //     } catch (error) {
-  //       console.error("Failed to fetch views:", error);
-  //     }
-  //   };
-  //   fetchViews();
-  // }, []);
+  useEffect(() => {
+    const fetchViews = async () => {
+      try {
+        const views = await GetViews();
+        setViews(views);
+      } catch (error) {
+        console.error("Failed to fetch views:", error);
+      }
+    };
+    fetchViews();
+  }, []);
 
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
