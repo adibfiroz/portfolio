@@ -74,13 +74,13 @@ const Intro = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="intror"
+            className="intror outline outline-2 outline-white/20 rounded-2xl bg-gradient-to-t from-sky-900 to-transparent"
           >
             <div
               className="imgContainer"
-              style={{ backgroundImage: `url(/img/adib.png)` }}
+              style={{ backgroundImage: `url(/img/adib-png.png)` }}
             >
-              <div className="exp">
+              <div className="exp hidden lg:flex items-center gap-4">
                 <div className="expl">3+</div>
                 <div className="expr">
                   Years of

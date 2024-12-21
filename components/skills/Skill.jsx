@@ -81,42 +81,49 @@ const hobbies = [
   {
     title: "Gaming",
     icon: "🕹️",
+    img: "img/gaming.jpg",
     left: "5%",
     top: "5%",
   },
   {
     title: "Food",
     icon: "🍟",
+    img: "img/food.jpg",
     left: "50%",
     top: "5%",
   },
   {
     title: "Hiking",
     icon: "🚶‍♂️",
+    img: "img/hiking.jpg",
     left: "10%",
     top: "35%",
   },
   {
     title: "Movies",
     icon: "📽️",
+    img: "img/movie.jpeg",
     left: "35%",
     top: "40%",
   },
   {
     title: "Travel",
-    icon: "🧳",
+    icon: "🚌",
+    img: "img/travel.jpg",
     left: "70%",
     top: "45%",
   },
   {
     title: "Anime",
     icon: "🎬",
+    img: "img/anime.jpg",
     left: "5%",
     top: "65%",
   },
   {
     title: "RC Hobby",
-    icon: "🚁",
+    icon: "🛩️",
+    img: "img/rc.jpg",
     left: "45%",
     top: "70%",
   },
@@ -131,12 +138,12 @@ const Skill = () => {
         <div className="grid grid-cols-1 gap-8 md:grid md:grid-cols-5 lg:grid-cols-3">
           <Card className="h-[320px] md:col-span-2 lg:col-span-1 p-0">
             <CardHeader
-              title="About Me"
-              desc="Explore my skills, interest and things i most like."
+              title="My Reads"
+              desc="Exploring, learning the tools use to build AI. -> TensorFlow"
               className="px-6 pt-6 md:px-10 md:pt-8"
             />
             <div className="w-40 mx-auto mt-8">
-              <img src="img/adib.png" alt="" />
+              <img src="img/tensorflow.png" className="" alt="" />
             </div>
           </Card>
           <Card className="h-[320px] p-0 md:col-span-3 lg:col-span-2">
@@ -169,7 +176,7 @@ const Skill = () => {
               {hobbies.map((item) => (
                 <motion.div
                   key={item.title}
-                  className="inline-flex cursor-pointer items-center gap-2 px-6 blue-gradient rounded-full py-1.5 absolute"
+                  className="cursor-pointer blue-gradient rounded-full py-1.5 absolute"
                   style={{
                     left: item.left,
                     top: item.top,
@@ -177,10 +184,19 @@ const Skill = () => {
                   drag
                   dragConstraints={constraintRef}
                 >
-                  <span className="font-medium text-gray-950">
-                    {item.title}
-                  </span>
-                  <span>{item.icon}</span>
+                  <div className="inline-flex items-center gap-2 px-6  relative group/item">
+                    <span className="font-medium text-gray-950">
+                      {item.title}
+                    </span>
+                    <span>{item.icon}</span>
+                    <img
+                      src={item.img}
+                      className=" aspect-square absolute left-0 right-0 invisible opacity-0 transition duration-300 bottom-8 group-hover/item:visible group-hover/item:opacity-100 object-cover rounded-md"
+                      width={200}
+                      height={200}
+                      alt=""
+                    />
+                  </div>
                 </motion.div>
               ))}
             </div>
