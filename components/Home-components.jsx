@@ -50,17 +50,18 @@ const HomeComponents = () => {
     });
   });
 
-  // useEffect(() => {
-  //   const updateViews = async () => {
-  //     try {
-  //       await UpdateViews();
-  //     } catch (error) {
-  //       console.error("Failed to update views:", error);
-  //     }
-  //   };
+  const updateViews = async () => {
+    try {
+      await UpdateViews();
+    } catch (error) {
+      console.error("Failed to update views:", error);
+    }
+  };
 
-  //   updateViews();
-  // }, []);
+  useEffect(() => {
+    updateViews();
+  }, []);
+
   const fetchViews = async () => {
     setIsLoading(true);
     try {
@@ -128,7 +129,7 @@ const HomeComponents = () => {
 
       <a
         href="/AdibFirozCV.pdf" // The path to your resume in the public folder
-        download="Adib Firoz CV.pdf"
+        download="Adib-Firoz-CV.pdf"
         className=" fixed bottom-5 right-5 z-20"
       >
         <button className="relative h-12 w-40 overflow-hidden  bg-[#217bfe] text-white shadow-2xl animate-bounce rounded-full">
