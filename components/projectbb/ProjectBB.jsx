@@ -8,27 +8,30 @@ const ProjectBB = () => {
   const featuredProjects = [
     {
       id: 1,
-      name: "Future AI",
-      desc: "It's an Generative AI website using replicate API. you can create Images, upscale, caption and chat with the model. interact with community images, follow users, make your images private and much more.",
-      tech: "next js, react, stripe, mongoDB, prisma, shadcn/ui",
-      url: "https://future-ai.vercel.app/",
-      img: "img/future2.png",
+      name: "Pixsider",
+      desc: "Built for AI, where you can browse thousands of AI images, you can download, like and save your images through collections. you can also generate captions of images and much more...",
+      tech: "next js, react, stripe, mongoDB, prisma, ant design",
+      url: "https://pixsider.com/",
+      img: "img/pixsider.png",
+      btnText: "Visit Live Site",
     },
     {
       id: 2,
+      name: "Future AI",
+      desc: "It's an Generative AI website using replicate API. you can create Images, upscale, caption and remove backgrounds. interact with community images, follow users, make your images private and much more.",
+      tech: "next js, react, stripe, mongoDB, prisma, shadcn/ui",
+      url: "https://future-ai.vercel.app/",
+      img: "img/future2.png",
+      btnText: "Visit Demo Site",
+    },
+    {
+      id: 3,
       name: "Bluwberry",
       desc: "A Software based app where user's can write reviews on softwares. saved, search and more...",
       tech: "react, express js, mongoDB, node js",
       url: "https://bluwbery.onrender.com/",
       img: "img/b1.png",
-    },
-    {
-      id: 3,
-      name: "Pixel AI",
-      desc: "Gallery of images but only for AI. much like pexels, you can download, like and manage your images through collections.",
-      tech: "next js, react, stripe, mongoDB, prisma, shadcn/ui",
-      url: "https://pexel-ai.vercel.app/",
-      img: "img/pixel-ai2.png",
+      btnText: "Visit Demo Site",
     },
   ];
 
@@ -61,7 +64,7 @@ const ProjectBB = () => {
                   </p>
                   <Link href={project.url} target="_blank">
                     <button className=" text-white blue-gradient inline-flex items-center justify-center gap-2 font-semibold capitalize px-8 py-3 mt-8 w-full md:w-auto text-lg rounded-xl">
-                      Visit Live Site <ArrowOutwardOutlined />
+                      {project.btnText} <ArrowOutwardOutlined />
                     </button>
                   </Link>
                 </div>

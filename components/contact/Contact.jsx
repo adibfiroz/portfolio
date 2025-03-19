@@ -6,6 +6,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import CallIcon from "@mui/icons-material/Call";
 import EmailIcon from "@mui/icons-material/Email";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
 const Contact = () => {
   const ref = useRef();
@@ -77,11 +78,14 @@ const Contact = () => {
               <div className=" backdrop-blur-3xl text-sm lg:text-lg rounded-xl py-5 px-4 md:py-10 md:px-8 flex flex-col gap-5 bg-white/5">
                 <div className="inline-flex text-white items-center gap-4">
                   <LocationOnIcon className=" size-8 text-[#64b8fb]" />
-                  <span>mira road, Mumbai, India</span>
+                  <span>Mira road, Mumbai, India</span>
                 </div>
                 <div className="inline-flex text-white items-center gap-4">
                   <CallIcon className=" size-8 text-[#64b8fb]" />
-                  <span>+91 9702 384 323</span>
+                  <span className="flex items-center gap-1">
+                    +91 9702 384 323 +
+                    <WhatsAppIcon className=" size-8 text-[#64b8fb]" />
+                  </span>
                 </div>
                 <div className="inline-flex text-white items-center gap-4">
                   <EmailIcon className=" size-8 text-[#64b8fb]" />

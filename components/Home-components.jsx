@@ -22,9 +22,21 @@ import GetViews from "../app/actions/get-views";
 import TapeSection from "./tape";
 import VolumeUpIcon from "@mui/icons-material/VolumeUp";
 import VolumeOffIcon from "@mui/icons-material/VolumeOff";
+import { useScroll, motion, useTransform } from "framer-motion";
 
 const HomeComponents = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [hasClicked, setHasClicked] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [views, setViews] = useState(0);
+
+  const audioRef = useRef(null);
+  const titleRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: titleRef,
+    offset: ["start end", "end start"],
+  });
 
   useEffect(() => {
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -38,35 +50,32 @@ const HomeComponents = () => {
     });
   });
 
+  // useEffect(() => {
+  //   const updateViews = async () => {
+  //     try {
+  //       await UpdateViews();
+  //     } catch (error) {
+  //       console.error("Failed to update views:", error);
+  //     }
+  //   };
+
+  //   updateViews();
+  // }, []);
+  const fetchViews = async () => {
+    setIsLoading(true);
+    try {
+      const views = await GetViews();
+      setViews(views);
+      setIsLoading(false);
+    } catch (error) {
+      setIsLoading(false);
+      console.error("Failed to fetch views:", error);
+    }
+  };
+
   useEffect(() => {
-    const updateViews = async () => {
-      try {
-        await UpdateViews();
-      } catch (error) {
-        console.error("Failed to update views:", error);
-      }
-    };
-
-    updateViews();
-  }, []);
-
-  const [views, setViews] = useState(0);
-
-  useEffect(() => {
-    const fetchViews = async () => {
-      try {
-        const views = await GetViews();
-        setViews(views);
-      } catch (error) {
-        console.error("Failed to fetch views:", error);
-      }
-    };
     fetchViews();
   }, []);
-
-  const audioRef = useRef(null);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [hasClicked, setHasClicked] = useState(false);
 
   // Function to handle user interaction for first-time click
   const handleFirstClick = () => {
@@ -93,6 +102,9 @@ const HomeComponents = () => {
     return () => document.removeEventListener("click", handleFirstClick);
   }, [hasClicked]);
 
+  const transFormTop = useTransform(scrollYProgress, [0, 1], ["0%", "15%"]);
+  const transFormBottom = useTransform(scrollYProgress, [0, 1], ["0%", "-15%"]);
+
   return (
     <div className="home bg-gray-900 ">
       <div className="fixed bottom-5 left-5 z-10 ">
@@ -114,6 +126,16 @@ const HomeComponents = () => {
         </button>
       </Link> */}
 
+      <a
+        href="/AdibFirozCV.pdf" // The path to your resume in the public folder
+        download="Adib Firoz CV.pdf"
+        className=" fixed bottom-5 right-5 z-20"
+      >
+        <button className="relative h-12 w-40 overflow-hidden  bg-[#217bfe] text-white shadow-2xl animate-bounce rounded-full">
+          <span className="relative">Download CV</span>
+        </button>
+      </a>
+
       <div className="sections">
         <Intro />
 
@@ -123,7 +145,18 @@ const HomeComponents = () => {
               <Tooltip title="Views" placement="top">
                 <div className="bg_View">
                   <VisibilityIcon className="animate-pulse" />
-                  {views}
+                  {isLoading ? (
+                    <img
+                      src="/btn-loading.gif"
+                      width={18}
+                      height={18}
+                      alt="loader"
+                      className="invert-[.60]"
+                    />
+                  ) : (
+                    <>{views}</>
+                  )}
+
                   <span className=" text-sm">views</span>
                 </div>
               </Tooltip>
@@ -142,6 +175,26 @@ const HomeComponents = () => {
           </div>
         </div>
         <Work />
+
+        <section className="pt-28 pb-10">
+          <h2
+            className="text-4xl md:text-7xl lg:text-8xl flex flex-col overflow-hidden"
+            ref={titleRef}
+          >
+            <motion.span
+              className=" whitespace-nowrap"
+              style={{ x: transFormTop }}
+            >
+              Experienced working with international clients
+            </motion.span>
+            <motion.span
+              className=" whitespace-nowrap self-end text-[#64b8fb]"
+              style={{ x: transFormBottom }}
+            >
+              Experienced working with international clients
+            </motion.span>
+          </h2>
+        </section>
         <ProjectBB />
         <Projects />
         <TapeSection />
@@ -149,6 +202,85 @@ const HomeComponents = () => {
         <Qualifications />
         <Certifications />
         <EmpMonth />
+
+        <div className="mb-20">
+          <div className=" container mx-auto px-4 ">
+            <div className="text-center p-4 py-10 bg-gray-800 rounded-3xl overflow-hidden outline-white/20 outline-2">
+              <h2 className="text-white text-3xl md:text-4xl font-bold">
+                Also a Content Creator
+              </h2>
+              <p className="text-sm lg:text-base text-white/60 mt-2">
+                besides my work, i like to make content for memes and anime.
+              </p>
+
+              <div className="mt-10 flex items-center gap-5 sm:gap-12 justify-center">
+                <Link
+                  className=""
+                  href="https://www.youtube.com/@AdibFiroz"
+                  target="_blank"
+                >
+                  <div className="mb-3">
+                    <img
+                      src="/ai-adib.png"
+                      className="size-20 rounded-full object-cover"
+                      alt="adib"
+                    />
+                  </div>
+                  <div className=" relative w-fit mx-auto">
+                    <img
+                      src="/youtube.svg"
+                      className="size-12 relative z-10"
+                      alt="youtube"
+                    />
+                    <span className=" absolute size-4 top-4 right-4 -z-1 bg-white"></span>
+                  </div>
+                </Link>
+                <Link
+                  className=" relative"
+                  href="https://www.instagram.com/daily_pirates/"
+                  target="_blank"
+                >
+                  <div className="mb-3">
+                    <img
+                      src="/luffy.webp"
+                      className="size-20 rounded-full object-cover"
+                      alt="adib"
+                    />
+                  </div>
+                  <div className=" relative w-fit mx-auto">
+                    <img
+                      src="/instagram.svg"
+                      className="size-12 relative z-10"
+                      alt="instagram"
+                    />
+                  </div>
+                </Link>
+                <Link
+                  className=" relative"
+                  href="https://www.youtube.com/@DailyPirates"
+                  target="_blank"
+                >
+                  <div className="mb-3">
+                    <img
+                      src="/luffy.webp"
+                      className="size-20 rounded-full object-cover"
+                      alt="adib"
+                    />
+                  </div>
+                  <div className=" relative w-fit mx-auto">
+                    <img
+                      src="/youtube.svg"
+                      className="size-12 relative z-10"
+                      alt="youtube"
+                    />
+                    <span className=" absolute size-4 top-4 right-4 -z-1 bg-white"></span>
+                  </div>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <Contact />
         <div className="footer">
           <div className="container">

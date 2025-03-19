@@ -81,7 +81,7 @@ const Intro = () => {
               style={{ backgroundImage: `url(/img/adib-png.png)` }}
             >
               <div className="exp hidden lg:flex items-center gap-4">
-                <div className="expl">3+</div>
+                <div className="expl">4+</div>
                 <div className="expr">
                   Years of
                   <br />
