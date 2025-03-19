@@ -23,7 +23,7 @@ const TapeSection = () => {
                             <Fragment key={index}>
                                 {softSkills.map((skill) => (
                                     <div key={skill} className='inline-flex gap-4 items-center'>
-                                        <span className=' text-gray-900 uppercase font-extrabold text-sm'>{skill}</span>
+                                        <span className=' text-stone-800 uppercase font-extrabold text-sm'>{skill}</span>
                                         <img src="img/star-cross.svg" width={16} height={16} className='-rotate-12' alt="" />
                                     </div>
                                 ))}

@@ -185,7 +185,7 @@ const Skill = () => {
                   dragConstraints={constraintRef}
                 >
                   <div className="inline-flex items-center gap-2 px-6  relative group/item">
-                    <span className="font-medium text-gray-950">
+                    <span className="font-medium text-stone-800">
                       {item.title}
                     </span>
                     <span>{item.icon}</span>

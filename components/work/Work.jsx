@@ -4,7 +4,54 @@ import BusinessIcon from "@mui/icons-material/Business";
 import DescriptionIcon from "@mui/icons-material/Description";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
+const workExp = [
+  {
+    id: 1,
+    company: "Caregility",
+    url: "https://caregility.com/",
+    location: "A healthcare company in New York, USA",
+    duration: "2024 - Present",
+    workMode: "Remote",
+    details: [
+      "From the beginning, I was involved in a new project called iCare. I had the opportunity to select some of the technologies used in building the platform. This project aims to enhance patient care efficiency by providing a platform where doctors and nurses can manage and track patient tasks, with automation based on recurrence and frequency.",
+      "I have been responsible for implementing the frontend, including API integrations and UI enhancements, addressing challenges as they arise.",
+      "The project was presented at a conference, where it was showcased to multiple clients and received highly positive feedback.",
+    ],
+  },
+  {
+    id: 2,
+    company: "Acoup",
+    url: "https://www.acoup.com/",
+    location: "A Recruitment company in Dubai, UAE",
+    duration: "January 2020 - March 2024",
+    workMode: "Onsite",
+    details: [
+      "When I was hired, a senior developer mentioned that despite competing with candidates who had twice the experience, I was chosen for my speed and efficiency.",
+      "Gained proficiency in the Laravel PHP framework.",
+      "Focused on ensuring an optimal user experience across devices by implementing responsive designs using media queries and flexible grid systems, ensuring seamless transitions between desktop and mobile.",
+      "Kept up with the latest front-end development trends and technologies by actively participating in online courses and developer communities, applying best practices to projects.",
+    ],
+  },
+  {
+    id: 3,
+    company: "MouthShut.com",
+    url: "https://www.mouthshut.com/",
+    location: "A digital marketing company in Mumbai, India",
+    duration: "July 2020 - October 2023",
+    workMode: "Remote/Hybrid",
+    details: [
+      "Responsible for the development and maintenance of the company website.",
+      "Developed newsletters and responsive web pages, including new features and modifications to existing ones.",
+      "Led a team for 1.8 years, managing project execution and team coordination.",
+      "Implemented SEO best practices, conducted testing, and optimized web performance.",
+      "Resolved error logs, fixed bugs, and ensured smooth website functionality.",
+      "Worked in an agile environment, contributing to the software development lifecycle.",
+      "Demonstrated strong problem-solving skills, quickly analyzing and resolving issues systematically and efficiently.",
+    ],
+  },
+];
 const Work = () => {
   return (
     <div className="work mt-12 md:mt-20" id="works">
@@ -13,106 +60,44 @@ const Work = () => {
           Work Experience
         </h2>
         <div className="workcontainer">
-          <div className="grid lg:grid-cols-2 gap-10">
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-              className="bg-gray-800 rounded-3xl overflow-hidden relative z-0 after:z-10 after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:-outline-offset-2 after:rounded-3xl after:outline-white/20 p-8 after:pointer-events-none"
-            >
-              <div className="workFlex">
-                <BusinessIcon className="icon" />
-                <div className="mothshut">
-                  <a href="https://www.acoup.com/" target="_blank">
-                    Acoup
-                  </a>{" "}
-                  - <i>Dubai, UAE</i> - <i>Onsite</i>
+          <div className="grid xl:grid-cols-3 gap-10">
+            {workExp.map((work, i) => (
+              <motion.div
+                key={work.id}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 + i * 0.2 }}
+                viewport={{ once: true }}
+                className="bg-gray-800 rounded-3xl overflow-hidden relative z-0 after:z-10 after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:-outline-offset-2 after:rounded-3xl after:outline-white/20 p-8 after:pointer-events-none"
+              >
+                <div className="workFlex">
+                  <BusinessIcon className="icon" />
+                  <div className="mothshut">
+                    <Link href={work.url} target="_blank">
+                      {work.company}
+                    </Link>{" "}
+                    - <i>{work.location}</i>
+                  </div>
                 </div>
-              </div>
-              <div className="workFlex" style={{ marginTop: "20px" }}>
-                <CalendarMonthIcon className="icon" />
-                <div className="mothshut">2020 Jan - 2024 March</div>
-              </div>
-              <div className="workFlex" style={{ marginTop: "20px" }}>
-                <DescriptionIcon className="icon" />
-                <div className="mothshut">
-                  My work at Acoup
-                  <ul>
-                    <li>
-                      This is what a senior developer told me when I was hired.
-                      After my interview there were 5 to 6 more people with
-                      twice as much experience, but they said I was the fastest
-                      one of them.
-                    </li>
-                    <li>Learned Laravel php framework.</li>
-                    <li>
-                      Ensuring an optimal user experience across devices is a
-                      cornerstone of my approach. I{`'`}ve consistently
-                      delivered responsive designs, leveraging media queries and
-                      flexible grid systems to guarantee a seamless transition
-                      from desktop to mobile.
-                    </li>
-                    <li>
-                      In the fast-paced world of front-end development, staying
-                      current with the latest trends and technologies is
-                      paramount. Regularly participating in courses online
-                      communities, I bring fresh insights and best practices to
-                      every project.
-                    </li>
-                  </ul>
+                <div className="workFlex" style={{ marginTop: "20px" }}>
+                  <CalendarMonthIcon className="icon" />
+                  <div className="mothshut">
+                    {work.duration} - <i>{work.workMode}</i>
+                  </div>
                 </div>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-              className="bg-gray-800 rounded-3xl overflow-hidden relative z-0 after:z-10 after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:-outline-offset-2 after:rounded-3xl after:outline-white/20 p-8 after:pointer-events-none"
-            >
-              <div className="workFlex">
-                <BusinessIcon className="icon" />
-                <div className="mothshut">
-                  <a href="https://www.mouthshut.com/" target="_blank">
-                    MouthShut.com
-                  </a>{" "}
-                  - <i>Mumbai, India</i> - <i>Onsite / hybrid</i>
+                <div className="workFlex" style={{ marginTop: "20px" }}>
+                  <DescriptionIcon className="icon" />
+                  <div className="mothshut">
+                    My work at {work.company}
+                    <ul>
+                      {work.details.map((detail, i) => (
+                        <li key={i}>{detail}</li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-              </div>
-              <div className="workFlex" style={{ marginTop: "20px" }}>
-                <CalendarMonthIcon className="icon" />
-                <div className="mothshut">2020 July - 2023 October</div>
-              </div>
-              <div className="workFlex" style={{ marginTop: "20px" }}>
-                <DescriptionIcon className="icon" />
-                <div className="mothshut">
-                  Worked at MouthShut.com for 3 years.
-                  <ul>
-                    <li>
-                      my work invovles development & maintainence of the company
-                      website.
-                    </li>
-                    <li>
-                      I have develop newsletters, responsive websites. from
-                      creating new pages to changes in existing one.
-                    </li>
-                    <li>OOCSS practices</li>
-                    <li>Seo pratices, testing & optimzation. </li>
-                    <li>Solved error logs issues, bugs.</li>
-                    <li>
-                      Worked in agile environment on software development cylce.
-                    </li>
-                    <li>
-                      Quickly analyzing problems and devising effective and
-                      efficient solutions. Diagnosing and resolving issues in a
-                      systematic manner.
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </motion.div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </div>
