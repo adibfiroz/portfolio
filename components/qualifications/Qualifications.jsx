@@ -36,7 +36,7 @@ const Qualifications = () => {
         <h2 className="text-white text-3xl md:text-5xl">Qualifications</h2>
 
         <div className="mt-12 flex overflow-x-clip px-5 [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] py-4 -my-4">
-          <div className=" flex gap-8 pr-8 flex-none animate-move-left [animation-duration:60s] hover:[animation-play-state:paused]">
+          <div className=" flex gap-8 pr-8 flex-none animate-move-left [animation-duration:20s] hover:[animation-play-state:paused]">
             {[...new Array(2)].fill(0).map((_, index) => (
               <Fragment key={index}>
                 {qualifications.map((qualif) => (

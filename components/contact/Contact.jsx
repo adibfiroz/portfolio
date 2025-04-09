@@ -84,7 +84,7 @@ const Contact = () => {
                   <CallIcon className=" size-8 text-[#64b8fb]" />
                   <span className="flex items-center gap-1">
                     +91 9702 384 323 +
-                    <WhatsAppIcon className=" size-8 text-[#64b8fb]" />
+                    <WhatsAppIcon className=" size-8 text-[#25d366]" />
                   </span>
                 </div>
                 <div className="inline-flex text-white items-center gap-4">

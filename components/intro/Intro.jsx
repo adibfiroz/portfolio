@@ -78,7 +78,7 @@ const Intro = () => {
           >
             <div
               className="imgContainer"
-              style={{ backgroundImage: `url(/img/adib-png.png)` }}
+              style={{ backgroundImage: `url(/adib-upscale.png)` }}
             >
               <div className="exp hidden lg:flex items-center gap-4">
                 <div className="expl">4+</div>

@@ -130,7 +130,7 @@ const HomeComponents = () => {
       <a
         href="/AdibFirozCV.pdf" // The path to your resume in the public folder
         download="Adib-Firoz-CV.pdf"
-        className=" fixed bottom-5 right-5 z-20"
+        className=" fixed bottom-5 right-5 z-20 shadow-md"
       >
         <button className="relative h-12 w-40 overflow-hidden  bg-[#217bfe] text-white shadow-2xl animate-bounce rounded-full">
           <span className="relative">Download CV</span>
@@ -183,7 +183,7 @@ const HomeComponents = () => {
             ref={titleRef}
           >
             <motion.span
-              className=" whitespace-nowrap"
+              className=" whitespace-nowrap text-white"
               style={{ x: transFormTop }}
             >
               Experienced working with international clients
@@ -287,7 +287,7 @@ const HomeComponents = () => {
           <div className="container">
             <img src="/img/AF.png" alt="af" />
             <span>
-              Made with Next js @23 - {new Date().getFullYear()} By Adib Firoz
+              Made By Adib Firoz using Next js @23 - {new Date().getFullYear()}
             </span>
           </div>
         </div>
