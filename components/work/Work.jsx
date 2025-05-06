@@ -25,7 +25,7 @@ const workExp = [
     company: "Acoup",
     url: "https://www.acoup.com/",
     location: "A Recruitment company in Dubai, UAE",
-    duration: "January 2020 - March 2024",
+    duration: "January 2024 - March 2024",
     workMode: "Onsite",
     details: [
       "When I was hired, a senior developer mentioned that despite competing with candidates who had twice the experience, I was chosen for my speed and efficiency.",

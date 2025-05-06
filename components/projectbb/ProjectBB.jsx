@@ -9,7 +9,7 @@ const ProjectBB = () => {
     {
       id: 1,
       name: "Pixsider",
-      desc: "Built for AI, where you can browse thousands of AI images, you can download, like and save your images through collections. you can also generate captions of images and much more...",
+      desc: "Created by me and Built for AI, where you can browse thousands of AI images, you can download, like and save your images through collections. you can also generate captions of images and much more...",
       tech: "next js, react, stripe, mongoDB, prisma, ant design",
       url: "https://pixsider.com/",
       img: "img/pixsider.png",

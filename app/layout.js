@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-      <link rel="icon" type="image/png" sizes="32x32" href="/AF.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/logo-adib.png" />
       </head>
       <body className={inter.className}>{children}</body>
     </html>

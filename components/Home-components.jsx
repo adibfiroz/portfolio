@@ -128,7 +128,7 @@ const HomeComponents = () => {
       </Link> */}
 
       <a
-        href="/AdibFirozCV.pdf" // The path to your resume in the public folder
+        href="/Adib-Firoz-CV.pdf" // The path to your resume in the public folder
         download="Adib-Firoz-CV.pdf"
         className=" fixed bottom-5 right-5 z-20 shadow-md"
       >
@@ -285,7 +285,7 @@ const HomeComponents = () => {
         <Contact />
         <div className="footer">
           <div className="container">
-            <img src="/img/AF.png" alt="af" />
+            <img src="/logo-adib.png" className="object-cover" alt="adib" />
             <span>
               Made By Adib Firoz using Next js @23 - {new Date().getFullYear()}
             </span>

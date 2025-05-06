@@ -22,7 +22,11 @@ const Navbar = ({ menuOpen, setMenuOpen }) => {
         <div className={"nav " + (menuOpen && "active")}>
           <Link href="/">
             <div className="headLeft">
-              <img src="/img/AF.png" alt="adib firoz" />
+              <img
+                src="/logo-adib.png"
+                className=" object-cover"
+                alt="adib firoz"
+              />
               <span>AdibFiroz</span>
             </div>
           </Link>
