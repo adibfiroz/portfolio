@@ -36,8 +36,8 @@ const Intro = () => {
                 options={{
                   strings: [
                     "React Developer.",
-                    "FrontEnd Developer.",
-                    "Mern stack Developer.",
+                    "Software Engineer.",
+                    "Frontend Developer.",
                     "Web Developer.",
                   ],
                   autoStart: true,
