@@ -30,7 +30,7 @@ const ProjectBB = () => {
       desc: "Implemented a real-time patient monitoring system using websockets with camera controls.",
       url: "/",
       tech: "react, tyescript, redux, REST API, tailwind css, ant design, vite",
-      img: "img/Icare.png",
+      img: "img/icare.png",
       btnText: "Visit Demo Site",
     },
     {
