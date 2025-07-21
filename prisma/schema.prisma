@@ -14,3 +14,8 @@ model View {
   id    String @id @default(auto()) @map("_id") @db.ObjectId
   views Int    @default(0)
 }
+
+model Like {
+  id    String @id @default(auto()) @map("_id") @db.ObjectId
+  count Int    @default(0)
+}

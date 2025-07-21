@@ -7,7 +7,7 @@ const EmpMonth = () => {
       <div className="container mx-auto max-w-4xl p-5">
         <div className="">
           <h2 className="text-white font-bold text-3xl md:text-5xl text-center">
-            Employee of the Month
+            Achievement
           </h2>
           <Card className="mt-16">
             <div className="grid gap-10 sm:grid-cols-2">

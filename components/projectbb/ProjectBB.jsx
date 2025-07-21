@@ -8,6 +8,15 @@ const ProjectBB = () => {
   const featuredProjects = [
     {
       id: 1,
+      name: "Pernida",
+      desc: "My own project which is a Generative AI website. where you can create Images, upscale, caption and remove backgrounds. interact with community images, follow users, make your images private and much more.",
+      tech: "next js, react, mongoDB, prisma, shadcn/ui, redux",
+      url: "https://www.pernida.com/",
+      img: "img/pernida.png",
+      btnText: "Visit Live Site",
+    },
+    {
+      id: 2,
       name: "Pixsider",
       desc: "Created by me and Built for AI, where you can browse thousands of AI images, you can download, like and save your images through collections. you can also generate captions of images and much more...",
       tech: "next js, react, stripe, mongoDB, prisma, ant design",
@@ -16,16 +25,16 @@ const ProjectBB = () => {
       btnText: "Visit Live Site",
     },
     {
-      id: 2,
-      name: "Future AI",
-      desc: "It's an Generative AI website using replicate API. you can create Images, upscale, caption and remove backgrounds. interact with community images, follow users, make your images private and much more.",
-      tech: "next js, react, stripe, mongoDB, prisma, shadcn/ui",
-      url: "https://future-ai.vercel.app/",
-      img: "img/future2.png",
+      id: 3,
+      name: "ICare Cordinator",
+      desc: "Implemented a real-time patient monitoring system using websockets with camera controls.",
+      url: "/",
+      tech: "react, tyescript, redux, REST API, tailwind css, ant design, vite",
+      img: "img/Icare.png",
       btnText: "Visit Demo Site",
     },
     {
-      id: 3,
+      id: 4,
       name: "Bluwberry",
       desc: "A Software based app where user's can write reviews on softwares. saved, search and more...",
       tech: "react, express js, mongoDB, node js",
@@ -62,7 +71,14 @@ const ProjectBB = () => {
                   <p className="text-sm md:text-base text-white/50 mt-4">
                     tech: {project.tech}.
                   </p>
-                  <Link href={project.url} target="_blank">
+                  <Link
+                    href={project.url}
+                    target="_blank"
+                    className={`${
+                      project.name === "ICare Cordinator" &&
+                      " pointer-events-none opacity-50"
+                    }`}
+                  >
                     <button className=" text-white blue-gradient inline-flex items-center justify-center gap-2 font-semibold capitalize px-8 py-3 mt-8 w-full md:w-auto text-lg rounded-xl">
                       {project.btnText} <ArrowOutwardOutlined />
                     </button>

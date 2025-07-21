@@ -23,11 +23,11 @@ import TapeSection from "./tape";
 import VolumeUpIcon from "@mui/icons-material/VolumeUp";
 import VolumeOffIcon from "@mui/icons-material/VolumeOff";
 import { useScroll, motion, useTransform } from "framer-motion";
+import LikeButton from "./Like";
 
 const HomeComponents = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [hasClicked, setHasClicked] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [views, setViews] = useState(0);
 
@@ -78,15 +78,6 @@ const HomeComponents = () => {
     fetchViews();
   }, []);
 
-  // Function to handle user interaction for first-time click
-  const handleFirstClick = () => {
-    if (!hasClicked) {
-      audioRef.current.play();
-      setIsPlaying(true);
-      setHasClicked(true);
-    }
-  };
-
   // Play/pause button handler
   const togglePlayPause = () => {
     if (isPlaying) {
@@ -96,12 +87,6 @@ const HomeComponents = () => {
     }
     setIsPlaying(!isPlaying);
   };
-
-  useEffect(() => {
-    // Add a one-time click event listener to the document
-    document.addEventListener("click", handleFirstClick, { once: true });
-    return () => document.removeEventListener("click", handleFirstClick);
-  }, [hasClicked]);
 
   const transFormTop = useTransform(scrollYProgress, [0, 1], ["0%", "15%"]);
   const transFormBottom = useTransform(scrollYProgress, [0, 1], ["0%", "-15%"]);
@@ -127,10 +112,12 @@ const HomeComponents = () => {
         </button>
       </Link> */}
 
+      <LikeButton />
+
       <a
         href="/Adib-Firoz-CV.pdf" // The path to your resume in the public folder
         download="Adib-Firoz-CV.pdf"
-        className=" fixed bottom-5 right-5 z-20 shadow-md"
+        className=" fixed bottom-5 right-5 z-20 shadow-md hidden"
       >
         <button className="relative h-12 w-40 overflow-hidden  bg-[#217bfe] text-white shadow-2xl animate-bounce rounded-full">
           <span className="relative">Download CV</span>

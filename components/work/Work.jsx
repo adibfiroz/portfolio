@@ -12,7 +12,7 @@ const workExp = [
     company: "Caregility",
     url: "https://caregility.com/",
     location: "A healthcare company in New York, USA",
-    duration: "2024 - Present",
+    duration: "Dec 2024 - Present",
     workMode: "Remote",
     details: [
       "From the beginning, I was involved in a new project called iCare. I had the opportunity to select some of the technologies used in building the platform. This project aims to enhance patient care efficiency by providing a platform where doctors and nurses can manage and track patient tasks, with automation based on recurrence and frequency.",
