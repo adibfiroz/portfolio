@@ -58,9 +58,9 @@ const HomeComponents = () => {
     }
   };
 
-  useEffect(() => {
-    updateViews();
-  }, []);
+  // useEffect(() => {
+  //   updateViews();
+  // }, []);
 
   const fetchViews = async () => {
     setIsLoading(true);
@@ -106,13 +106,11 @@ const HomeComponents = () => {
       <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
 
-      {/* <Link href="#contact" className=" fixed bottom-5 right-5 z-[4]">
+      <Link href="#contact" className=" fixed bottom-5 right-5 z-[4]">
         <button className="relative h-12 w-40 overflow-hidden  bg-[#217bfe] text-white shadow-2xl animate-bounce rounded-full">
           <span className="relative z-10">Open to work</span>
         </button>
-      </Link> */}
-
-      <LikeButton />
+      </Link>
 
       <a
         href="/Adib-Firoz-CV.pdf" // The path to your resume in the public folder
