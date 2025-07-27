@@ -58,9 +58,9 @@ const HomeComponents = () => {
     }
   };
 
-  // useEffect(() => {
-  //   updateViews();
-  // }, []);
+  useEffect(() => {
+    updateViews();
+  }, []);
 
   const fetchViews = async () => {
     setIsLoading(true);
