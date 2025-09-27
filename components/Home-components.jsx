@@ -44,7 +44,7 @@ const HomeComponents = () => {
         e.preventDefault();
         document.querySelector(this.getAttribute("href")).scrollIntoView({
           behavior: "smooth",
-          block: "center",
+          block: "start",
         });
       });
     });
@@ -107,7 +107,7 @@ const HomeComponents = () => {
       <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
 
       <Link href="#contact" className=" fixed bottom-5 right-5 z-[4]">
-        <button className="relative h-12 w-40 overflow-hidden  bg-[#217bfe] text-white shadow-2xl animate-bounce rounded-full">
+        <button className="relative h-12 w-40 overflow-hidden blue-gradient text-white font-semibold shadow-2xl animate-bounce rounded-full ">
           <span className="relative z-10">Open to work</span>
         </button>
       </Link>
@@ -160,6 +160,7 @@ const HomeComponents = () => {
             </div>
           </div>
         </div>
+
         <Work />
 
         <section className="pt-28 pb-10">
