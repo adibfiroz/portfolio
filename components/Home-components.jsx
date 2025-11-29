@@ -92,12 +92,12 @@ const HomeComponents = () => {
       </div>
       <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-      {views && (
-        <ViewLastHour
-          productId="66bdc30249a2822e0882899a"
-          initialTotalViews={views}
-        />
-      )}
+
+      <ViewLastHour
+        productId="66bdc30249a2822e0882899a"
+        initialTotalViews={views}
+      />
+
       <Link href="#contact" className=" fixed bottom-5 right-5 z-[4]">
         <button className="relative h-12 w-40 overflow-hidden blue-gradient text-white font-semibold shadow-2xl animate-bounce rounded-full ">
           <span className="relative z-10">Open to work</span>
