@@ -17,13 +17,12 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import Link from "next/link";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import Tooltip from "@mui/material/Tooltip";
-import UpdateViews from "../app/actions/update-views";
 import GetViews from "../app/actions/get-views";
 import TapeSection from "./tape";
+import ViewLastHour from "./view-last-hour";
 import VolumeUpIcon from "@mui/icons-material/VolumeUp";
 import VolumeOffIcon from "@mui/icons-material/VolumeOff";
 import { useScroll, motion, useTransform } from "framer-motion";
-import LikeButton from "./Like";
 
 const HomeComponents = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -49,18 +48,6 @@ const HomeComponents = () => {
       });
     });
   });
-
-  const updateViews = async () => {
-    try {
-      await UpdateViews();
-    } catch (error) {
-      console.error("Failed to update views:", error);
-    }
-  };
-
-  useEffect(() => {
-    updateViews();
-  }, []);
 
   const fetchViews = async () => {
     setIsLoading(true);
@@ -105,7 +92,12 @@ const HomeComponents = () => {
       </div>
       <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-
+      {views && (
+        <ViewLastHour
+          productId="66bdc30249a2822e0882899a"
+          initialTotalViews={views}
+        />
+      )}
       <Link href="#contact" className=" fixed bottom-5 right-5 z-[4]">
         <button className="relative h-12 w-40 overflow-hidden blue-gradient text-white font-semibold shadow-2xl animate-bounce rounded-full ">
           <span className="relative z-10">Open to work</span>
