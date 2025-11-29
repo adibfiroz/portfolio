@@ -11,8 +11,19 @@ datasource db {
 }
 
 model View {
-  id    String @id @default(auto()) @map("_id") @db.ObjectId
-  views Int    @default(0)
+  id       String        @id @default(auto()) @map("_id") @db.ObjectId
+  views    Int           @default(0)
+  viewLogs LastDayView[]
+}
+
+model LastDayView {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  createdAt DateTime @default(now())
+
+  view   View   @relation(fields: [viewId], references: [id])
+  viewId String @db.ObjectId
+
+  @@index([viewId, createdAt])
 }
 
 model Like {
