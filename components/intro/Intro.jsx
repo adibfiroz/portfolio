@@ -35,7 +35,7 @@ const Intro = () => {
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className=" font-semibold text-4xl md:text-5xl lg:text-6xl my-5"
+              className=" font-semibold text-white text-4xl md:text-5xl lg:text-6xl my-5"
             >
               Adib Firoz
             </motion.h1>
