@@ -140,7 +140,7 @@ const Contact = () => {
                 viewport={{ once: true }}
                 disabled={loading}
                 type="submit"
-                className="blue-gradient rounded-lg disabled:opacity-50 w-full p-4 text-xl text-gray-900 font-semibold"
+                className="blue-gradient rounded-lg disabled:opacity-50 w-full p-4 text-xl text-white font-semibold"
               >
                 {loading ? "Sending" : "Send"}
               </motion.button>
