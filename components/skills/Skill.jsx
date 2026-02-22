@@ -109,7 +109,7 @@ const hobbies = [
   {
     title: "Travel",
     icon: "🚌",
-    img: "img/travel.jpg",
+    img: "adib1.jpg",
     left: "70%",
     top: "45%",
   },

@@ -48,10 +48,11 @@ const Intro = () => {
               <TypewriterComponent
                 options={{
                   strings: [
-                    "React Developer.",
-                    "Software Engineer.",
-                    "Frontend Developer.",
-                    "Web Developer.",
+                    "Senior Frontend Developer.",
+                    "Senior React Developer.",
+                    "Senior Software Engineer.",
+                    "Content Creator.",
+                    "Freelancer.",
                   ],
                   autoStart: true,
                   loop: true,
@@ -94,14 +95,14 @@ const Intro = () => {
                 <Slider {...settings} className="w-full h-full">
                   <div className=" aspect-square bg-cover bg-[url('/adib-upscale.png')]"></div>
                   <div className=" aspect-square bg-cover bg-center bg-[url('/adib3.jpg')]"></div>
-                  <div className=" aspect-square bg-cover bg-center bg-[url('/adib2.jpg')]"></div>
+                  <div className=" aspect-square bg-cover bg-center bg-[url('/adib6.jpg')]"></div>
                   <div className=" aspect-square bg-cover bg-center bg-[url('/adib1.jpg')]"></div>
-                  <div className=" aspect-square bg-cover bg-center bg-[url('/adib4.jpg')]"></div>
-                  <div className=" aspect-square bg-cover bg-center bg-[url('/adib5.jpg')]"></div>
+                  <div className=" aspect-square bg-cover bg-center bg-[url('/adib7.jpg')]"></div>
+                  <div className=" aspect-square bg-cover bg-center bg-[url('/adib8.jpeg')]"></div>
                 </Slider>
               </div>
               <div className="exp hidden lg:flex items-center gap-4">
-                <div className="expl">5</div>
+                <div className="expl">5+</div>
                 <div className="expr">
                   Years of
                   <br />

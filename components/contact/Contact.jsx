@@ -14,7 +14,7 @@ const Contact = () => {
   const [success, setSuccess] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
     emailjs
@@ -22,11 +22,11 @@ const Contact = () => {
         "service_e09c3y4",
         "template_nmsz5sd",
         ref.current,
-        "7XR3Zt2sZcWapdmuA"
+        "7XR3Zt2sZcWapdmuA",
       )
       .then(
         (result) => {
-          console.log(result.text);
+          ref.current.reset();
           setSuccess(true);
           setLoading(false);
           setTimeout(() => {
@@ -37,7 +37,7 @@ const Contact = () => {
           console.log(error.text);
           setSuccess(false);
           setLoading(false);
-        }
+        },
       );
   };
 
@@ -49,7 +49,7 @@ const Contact = () => {
   const backgroundPositionY = useTransform(
     scrollYProgress,
     [0, 1],
-    [-300, 300]
+    [-300, 300],
   );
 
   return (
