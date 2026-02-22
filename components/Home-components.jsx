@@ -99,7 +99,43 @@ const HomeComponents = () => {
       />
 
       <Link href="#contact" className=" fixed bottom-5 right-5 z-[4]">
-        <button className="relative h-12 w-40 overflow-hidden blue-gradient text-white font-semibold shadow-2xl animate-bounce rounded-full ">
+        <button className="relative group h-12 w-40 overflow-hidden bg-black text-white font-semibold shadow-2xl animate-bounce rounded-full transition-all duration-300">
+          {/* Top Neon Segment */}
+          <motion.div
+            initial={{ x: "-100%" }}
+            animate={{ x: "200%" }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              ease: "linear",
+            }}
+            className="absolute top-0 left-0 w-1/2 h-[2px] z-20"
+          >
+            {/* Core light */}
+            <div className="w-full h-full bg-gradient-to-r from-transparent via-cyan-400 to-transparent" />
+            {/* Neon Glow */}
+            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-cyan-400 to-transparent blur-[4px]" />
+          </motion.div>
+
+          {/* Bottom Neon Segment */}
+          <motion.div
+            initial={{ x: "200%" }}
+            animate={{ x: "-100%" }}
+            transition={{
+              duration: 3.5,
+              repeat: Infinity,
+              ease: "linear",
+            }}
+            className="absolute bottom-0 left-0 w-1/2 h-[2px] z-20"
+          >
+            {/* Core light */}
+            <div className="w-full h-full bg-gradient-to-r from-transparent via-white to-transparent" />
+            {/* Neon Glow */}
+            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white to-transparent blur-[4px]" />
+          </motion.div>
+
+          <div className="absolute inset-0 bg-gradient-to-t from-fuchsia-500/10 via-transparent to-cyan-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
           <span className="relative z-10">Open to work</span>
         </button>
       </Link>
@@ -195,7 +231,7 @@ const HomeComponents = () => {
               <div className="mt-10 flex items-center gap-5 sm:gap-12 justify-center">
                 <Link
                   className=""
-                  href="https://www.youtube.com/@AdibFiroz"
+                  href="https://www.youtube.com/@daily-meems"
                   target="_blank"
                 >
                   <div className="mb-3">

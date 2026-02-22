@@ -17,7 +17,7 @@ const workExp = [
     details: [
       "From the beginning, I was involved in a new project called iCare. I had the opportunity to select some of the technologies used in building the platform. This project aims to enhance patient care efficiency by providing a platform where doctors and nurses can manage and track patient tasks, with automation based on recurrence and frequency.",
       "I have been responsible for implementing the frontend, including API integrations and UI enhancements, addressing challenges as they arise.",
-      "The project was presented at a conference, where it was showcased to multiple clients and received highly positive feedback.",
+      "Implemented real-time patient monitoring features using WebSocket where they can be observed use camera controls, see live video feeds, and manage patient data in real-time.",
     ],
   },
   {
