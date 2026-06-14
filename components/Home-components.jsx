@@ -141,8 +141,8 @@ const HomeComponents = () => {
       </Link>
 
       <a
-        href="/Adib-Firoz-CV.pdf" // The path to your resume in the public folder
-        download="Adib-Firoz-CV.pdf"
+        href="/Adib-Firoz-Resume.pdf" // The path to your resume in the public folder
+        download="Adib-Firoz-Resume.pdf"
         className=" fixed bottom-5 right-5 z-20 shadow-md hidden"
       >
         <button className="relative h-12 w-40 overflow-hidden  bg-[#217bfe] text-white shadow-2xl animate-bounce rounded-full">
@@ -299,9 +299,10 @@ const HomeComponents = () => {
         <Contact />
         <div className="footer">
           <div className="container">
-            <img src="/logo-adib.png" className="object-cover" alt="adib" />
+            <img src="/meta-logo.png" className="object-cover" alt="adib" />
             <span>
-              Made By Adib Firoz using Next js @23 - {new Date().getFullYear()}
+              Made By Adib Firoz using Next js @2023 -{" "}
+              {new Date().getFullYear()}
             </span>
           </div>
         </div>

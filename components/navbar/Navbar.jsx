@@ -23,7 +23,7 @@ const Navbar = ({ menuOpen, setMenuOpen }) => {
           <Link href="/">
             <div className="headLeft">
               <img
-                src="/logo-adib.png"
+                src="/meta-logo.png"
                 className=" object-cover"
                 alt="adib firoz"
               />
