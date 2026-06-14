@@ -211,8 +211,8 @@ const Skill = () => {
               <div className=" absolute blue-gradient -z-20 inset-0 rounded-full animate-ping [animation-duration:2s]"></div>
               <div className=" absolute blue-gradient -z-10 inset-0 rounded-full"></div>
               <Image
-                src="/img/adib.png"
-                className=" rounded-full w-16 h-16 object-cover object-top"
+                src="/meta-logo.png"
+                className=" rounded-full w-16 h-16 object-cover"
                 alt="map"
                 width={50}
                 height={50}

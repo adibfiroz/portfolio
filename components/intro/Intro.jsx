@@ -52,7 +52,6 @@ const Intro = () => {
                     "Senior React Developer.",
                     "Senior Software Engineer.",
                     "Content Creator.",
-                    "Freelancer.",
                   ],
                   autoStart: true,
                   loop: true,
@@ -93,12 +92,12 @@ const Intro = () => {
             <div className="relative">
               <div className=" size-40 lg:size-96 overflow-hidden rounded-2xl ">
                 <Slider {...settings} className="w-full h-full">
-                  <div className=" aspect-square bg-cover bg-[url('/adib-upscale.png')]"></div>
+                  <div className=" aspect-square bg-cover bg-center bg-[url('/adib9.jpg')]"></div>
                   <div className=" aspect-square bg-cover bg-center bg-[url('/adib3.jpg')]"></div>
-                  <div className=" aspect-square bg-cover bg-center bg-[url('/adib6.jpg')]"></div>
+                  <div className=" aspect-square bg-cover bg-bottom bg-[url('/adib2.jpg')]"></div>
                   <div className=" aspect-square bg-cover bg-center bg-[url('/adib1.jpg')]"></div>
-                  <div className=" aspect-square bg-cover bg-center bg-[url('/adib7.jpg')]"></div>
-                  <div className=" aspect-square bg-cover bg-center bg-[url('/adib8.jpeg')]"></div>
+                  <div className=" aspect-square bg-cover bg-center bg-[url('/adib10.jpg')]"></div>
+                  <div className=" aspect-square bg-cover bg-center bg-[url('/ai-adib.png')]"></div>
                 </Slider>
               </div>
               <div className="exp hidden lg:flex items-center gap-4">
