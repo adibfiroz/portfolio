@@ -10,6 +10,15 @@
     }
 }
 
+ @keyframes orbit {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+  .animate-orbit {
+      animation: orbit 10s linear infinite;
+    }
+
 @keyframes pulse {
     50% {
         opacity: .5;

@@ -1,7 +1,9 @@
+"use client";
+
 import "./home.scss";
 import HomeComponents from "../components/Home-components";
 
-const Home = async () => {
+const Home = () => {
   return (
     <div>
       <HomeComponents />

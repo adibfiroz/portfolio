@@ -24,6 +24,38 @@ import VolumeUpIcon from "@mui/icons-material/VolumeUp";
 import VolumeOffIcon from "@mui/icons-material/VolumeOff";
 import { useScroll, motion, useTransform } from "framer-motion";
 
+const ExternalLinkIcon = ({ className = "w-4 h-4" }) => (
+  <svg
+    className={className}
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+    />
+  </svg>
+);
+
+const CpuIcon = ({ className = "w-5 h-5" }) => (
+  <svg
+    className={className}
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M9 3v2m6-2v2M9 19v2m6-2v2M3 9h2m-2 6h2m14-6h2m-2 6h2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"
+    />
+  </svg>
+);
+
 const HomeComponents = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -82,7 +114,7 @@ const HomeComponents = () => {
     <div className="home bg-gray-900 ">
       <div className="fixed bottom-5 left-5 z-10 ">
         {isPlaying && <img src="img/music.gif" width={50} height={50} alt="" />}
-        <audio ref={audioRef} src="/blackmoor-2.MP3" loop />
+        <audio ref={audioRef} src="/crab-rave-short.MP3" loop />
         <button
           onClick={togglePlayPause}
           className="w-10 h-10 bg-blue-500 text-white rounded-full"
@@ -90,6 +122,44 @@ const HomeComponents = () => {
           {isPlaying ? <VolumeUpIcon /> : <VolumeOffIcon />}
         </button>
       </div>
+
+      <div
+        className={`fixed w-fit top-16 md:top-[70px] left-0 right-0 mx-auto z-50 transition-all duration-500`}
+      >
+        <a
+          href="https://www.pernida.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group relative flex items-center gap-3 p-1.5 pr-4 rounded-full bg-slate-900/90 text-white backdrop-blur-lg border border-indigo-500/30 shadow-[0_0_25px_rgba(99,102,241,0.3)] hover:shadow-[0_0_35px_rgba(168,85,247,0.5)] transition-all duration-300"
+        >
+          {/* Orbit Ring Wrapper */}
+          <div className="relative w-10 h-10 flex items-center justify-center">
+            <div className="absolute inset-0 rounded-full border border-dashed border-indigo-400/60 animate-orbit"></div>
+            <div className="w-8 h-8 rounded-full flex items-center justify-center text-white shadow-inner">
+              <img
+                src="/logo-250.png"
+                width={25}
+                height={25}
+                alt="Pernida AI Logo"
+              />
+            </div>
+          </div>
+
+          <div className="flex flex-col text-left">
+            <div className="flex items-center gap-1.5">
+              <span className="font-black text-xs uppercase tracking-wider bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300 bg-clip-text text-transparent">
+                Pernida AI
+              </span>
+              <span className="text-[9px] font-bold px-1.5 py-0.2 rounded bg-purple-500/20 text-purple-300 border border-purple-500/30">
+                NEW LAUNCH
+              </span>
+            </div>
+            <span className="text-[10px] text-slate-400 font-mono"></span>
+          </div>
+          <ExternalLinkIcon className="w-3.5 h-3.5 text-purple-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+        </a>
+      </div>
+
       <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
 
