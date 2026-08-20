@@ -8,22 +8,13 @@ const ProjectBB = () => {
   const featuredProjects = [
     {
       id: 1,
-      name: "Pernida",
-      desc: "Welcome to the future of creativity. My new Generative AI suite empowers you to transform ideas into stunning images and videos instantly. Explore community-driven inspiration, use our intuitive design tools, or keep your creations secure with private generation modes. Your imagination, powered by AI.",
+      name: "Pernida ai",
+      desc: "Welcome to the future of creativity. My new Generative AI suite empowers you to transform ideas into stunning images, videos and audios instantly. Explore community-driven inspiration, use our intuitive design tools, or keep your creations secure with private generation modes. Your imagination, powered by AI.",
       tech: "next js, react, mongoDB, prisma, shadcn/ui, tyescript, redux",
       url: "https://www.pernida.com/",
-      img: "img/pernida2.png",
+      img: "img/pernida.png",
       btnText: "Visit Live Site",
     },
-    // {
-    //   id: 2,
-    //   name: "Pixsider",
-    //   desc: "Created by me and Built for AI, where you can browse thousands of AI images, you can download, like and save your images through collections. you can also generate captions of images and much more...",
-    //   tech: "next js, react, stripe, mongoDB, prisma, ant design",
-    //   url: "https://pixsider.com/",
-    //   img: "img/pixsider.png",
-    //   btnText: "Visit Live Site",
-    // },
     {
       id: 3,
       name: "ICare Cordinator",

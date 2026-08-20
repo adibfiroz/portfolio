@@ -35,7 +35,7 @@ const Intro = () => {
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className=" font-semibold text-white text-4xl md:text-5xl lg:text-6xl my-5"
+              className=" font-semibold text-white text-4xl md:text-5xl lg:text-6xl my-3 md:my-5"
             >
               Adib Firoz
             </motion.h1>
@@ -101,7 +101,7 @@ const Intro = () => {
                 </Slider>
               </div>
               <div className="exp hidden lg:flex items-center gap-4">
-                <div className="expl">5+</div>
+                <div className="expl">6+</div>
                 <div className="expr">
                   Years of
                   <br />
