@@ -17,7 +17,7 @@ const Navbar = ({ menuOpen, setMenuOpen }) => {
   }, []);
 
   return (
-    <div className={"navbar " + (active && "navActive")}>
+    <header className={"navbar " + (active && "navActive")}>
       <div className="container mx-auto">
         <div className={"nav " + (menuOpen && "active")}>
           <Link href="/">
@@ -25,7 +25,7 @@ const Navbar = ({ menuOpen, setMenuOpen }) => {
               <img
                 src="/meta-logo.png"
                 className=" object-cover"
-                alt="adib firoz"
+                alt="adib firoz logo"
               />
               <span>AdibFiroz</span>
             </div>
@@ -39,7 +39,7 @@ const Navbar = ({ menuOpen, setMenuOpen }) => {
           </div>
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 
