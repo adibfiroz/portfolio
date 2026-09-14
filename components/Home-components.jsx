@@ -140,7 +140,7 @@ const HomeComponents = () => {
                 src="/logo-250.png"
                 width={25}
                 height={25}
-                alt="Pernida AI Logo"
+                alt="new launch"
               />
             </div>
           </div>
@@ -301,12 +301,12 @@ const HomeComponents = () => {
               <div className="mt-10 flex items-center gap-5 sm:gap-12 justify-center">
                 <Link
                   className=""
-                  href="https://www.youtube.com/@daily-meems"
+                  href="https://www.youtube.com/@MisterBigSmile"
                   target="_blank"
                 >
                   <div className="mb-3">
                     <img
-                      src="/ai-adib.png"
+                      src="/misterbigsmile.png"
                       className="size-20 rounded-full object-cover"
                       alt="adib"
                     />
@@ -367,7 +367,7 @@ const HomeComponents = () => {
         </div>
 
         <Contact />
-        <div className="footer">
+        <footer className="footer">
           <div className="container">
             <img src="/meta-logo.png" className="object-cover" alt="adib" />
             <span>
@@ -375,7 +375,7 @@ const HomeComponents = () => {
               {new Date().getFullYear()}
             </span>
           </div>
-        </div>
+        </footer>
       </div>
     </div>
   );
